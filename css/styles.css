@@ -2,21 +2,37 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
   }
-   
-h1 {
-    color: SeaGreen;
+
+/* container styles */
+.container {
+    max-width: 90rem;
+    margin: 1rem auto;
+    background: #fff;
+}  
+
+/* header styles */
+.header {
+    background: #ccc;
 }
-   
+
+.site-title {
+    color: #fff;
+    font-size: 35px;
+}
+.site-brand {
+    padding: 1rem;
+}
+
 p, 
 li {
     font-size: 18px;
 }
   
-
 a {
     text-decoration: none;
 }
 
+/* menu styles */
 nav{
     font-family: monospace;
 }
@@ -24,15 +40,15 @@ nav{
 /* remove bullets and padding from all navbar lists */
 .navbar {
     overflow: hidden;
-    background: darkorange;
+    background: #152283;
     list-style: none;
     margin: 0;
     padding-left: 0;
 }
   
 .navbar li {
-    color: #fff;
-    background: darkorange;
+    color: #ccc;
+    background: #152283;
     display: block;
     float: left;
     padding: 1rem;
@@ -43,18 +59,18 @@ nav{
 
 /* link properties for ALL links in the navbar */
 .navbar li a {
-    color: #fff;
+    color: #ccc;
 }
 
 /* hover properties for top level */
 .navbar li:hover {
-    background: red;
+    background: #ccc;
     cursor: pointer;
 }
 
 /* dropdown */  
 .dropnavbar {
-    background: orange;
+    background: #152283;
     opacity: 0;
     min-width: 5rem;
     position: absolute;
@@ -83,4 +99,14 @@ nav{
 .dropnavbar li:hover{
     background-color: #666;
 }
-  
+
+/* footer styles */
+.footer {
+    background: #152283;
+    padding: 1rem;
+}
+
+.footer p {
+    font-size: 20px;
+    color: #ccc;
+}
