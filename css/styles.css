@@ -1,0 +1,86 @@
+/*  basic styling   */
+* {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+   
+h1 {
+    color: SeaGreen;
+}
+   
+p, 
+li {
+    font-size: 18px;
+}
+  
+
+a {
+    text-decoration: none;
+}
+
+nav{
+    font-family: monospace;
+}
+
+/* remove bullets and padding from all navbar lists */
+.navbar {
+    overflow: hidden;
+    background: darkorange;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+  
+.navbar li {
+    color: #fff;
+    background: darkorange;
+    display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+/* link properties for ALL links in the navbar */
+.navbar li a {
+    color: #fff;
+}
+
+/* hover properties for top level */
+.navbar li:hover {
+    background: red;
+    cursor: pointer;
+}
+
+/* dropdown */  
+.dropnavbar {
+    background: orange;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    /*margin-top: 1rem;*/
+    left: 0;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+/* show the sub navbar when hover the navbar */
+.navbar li:hover .dropnavbar {
+    display: block;
+    opacity: 1;
+}
+
+/* behaviour for sub navbar */
+.dropnavbar li {
+    clear: both;
+    width: 100%;
+}
+
+/* hover behaviour for links in sub navbar */
+.dropnavbar li:hover{
+    background-color: #666;
+}
+  
