@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link href="../../css/styles.css" type="text/css" rel="stylesheet">
-    <title>Basics</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./css/styles.css" type="text/css" rel="stylesheet">
+    <title>basics</title>
   </head>
   <body>
     <div class="container">
@@ -15,17 +16,20 @@
         </div>
         <!-- nav bar -->
         <nav role="navigation">
-          <ul class="navbar">
-              <li><a href="../../index.html">Home</a></li>
-              <li><a href="basics.html">Basics</a>
-                  <ul class="dropnavbar">
-                      <li><a href="which-printer/index.html">Which 3D Printer?</a></li>
-                      <li><a href="slicing/index.html">Slicing</a></li>
-                      <li><a href="design/index.html">Design</a></li>  
-                  </ul>
-              </li>
-              <li><a href="../contact-us/index.html">Contact Us</a></li>
-          </ul>
+          <div class="navbar">
+            <a href="../../index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbutton">Basics
+                <i class="fa fa-caret-down"></i>
+              </button>
+                <div class="dropdown-content">
+                  <a href="../basics/which-printer/index.html">Which 3D Printer?</a></li>
+                  <a href="../basics/slicing/index.html">Slicing</a>
+                  <a href="../basics/design/index.html">Design</a>
+                </div>
+            </div>
+            <a href="../contact-us/index.html">Contact Us</a>
+          </div>
         </nav>
       </header>
       

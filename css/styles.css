@@ -16,7 +16,7 @@
 }
 
 .site-title {
-    color: #fff;
+    color: #505050;
     font-size: 35px;
 }
 .site-brand {
@@ -33,76 +33,69 @@ a {
 }
 
 /* menu styles */
-nav{
-    font-family: monospace;
-}
-
-/* remove bullets and padding from all navbar lists */
 .navbar {
     overflow: hidden;
-    background: #152283;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+    background-color: #2d5986;
 }
   
-.navbar li {
-    color: #ccc;
-    background: #152283;
-    display: block;
+.navbar a {
     float: left;
-    padding: 1rem;
-    position: relative;
-    text-decoration: none;
-    transition-duration: 0.5s;
-}
-
-/* link properties for ALL links in the navbar */
-.navbar li a {
+    font-size: 16px;
     color: #ccc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-
-/* hover properties for top level */
-.navbar li:hover {
-    background: #ccc;
-    cursor: pointer;
+  
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
-
-/* dropdown */  
-.dropnavbar {
-    background: #152283;
-    opacity: 0;
-    min-width: 5rem;
-    position: absolute;
-    transition: all 0.5s ease;
-    /*margin-top: 1rem;*/
-    left: 0;
-    display: none;
-    list-style: none;
+  
+.dropdown .dropbutton {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: #ccc;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
     margin: 0;
-    padding-left: 0;
 }
-
-/* show the sub navbar when hover the navbar */
-.navbar li:hover .dropnavbar {
+  
+.navbar a:hover, .dropdown:hover .dropbutton {
+    background-color: #ffa64d;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2d5986;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: #ccc;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-    opacity: 1;
+    text-align: left;
 }
-
-/* behaviour for sub navbar */
-.dropnavbar li {
-    clear: both;
-    width: 100%;
+  
+.dropdown-content a:hover {
+    background-color: #ffa64d;
 }
-
-/* hover behaviour for links in sub navbar */
-.dropnavbar li:hover{
-    background-color: #666;
+  
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* footer styles */
 .footer {
-    background: #152283;
+    background: #2d5986;
     padding: 1rem;
 }
 
