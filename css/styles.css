@@ -21,7 +21,7 @@
 }
 
 .site-brand h1 {
-    font-family: 'Brush Script MT', cursive;
+    font-family: Verdana, sans-serif;
     position: relative;
     color: #505050;
     font-size: 35px;
@@ -101,6 +101,37 @@ a {
     display: block;
 }
 
+/* table styles */
+.journey-table {
+    border-collapse: collapse;
+  }
+  
+.journey-table td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+    background-color: white;
+  }
+
+.journey-table tr.jt-build td {
+    background-color: #D8D3D6;
+}
+
+.journey-table tr.jt-test td {
+    background-color: #F8FD89;
+}
+
+.journey-table tr.jt-mod td {
+    background-color: #96ADFC;
+}
+
+.journey-table tr.jt-issue td {
+    background-color: #E0A6AA;
+}
+
+.journey-table tr.jt-future td {
+    background-color: #A8F29A;
+}
 /* footer styles */
 .footer {
     background: #2d5986;
