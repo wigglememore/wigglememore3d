@@ -28,7 +28,7 @@
                 <div class="dropdown-content">
                   <a href="index.html">Journey</a>
                   <a href="../printable/index.html">Printable Mods</a></li>
-                  <a href="index.html">Hardware</a>
+                  <a href="../hardware/index.html">Hardware</a>
                   <a href="../electronics/index.html">Electronics</a>
                 </div>
             </div>
@@ -46,6 +46,11 @@
           Original CAD from narnabyQ on <a href="https://grabcad.com/library/creality-ender-5-pro-1">GRABCAD</a>.</p>
       
           <table class="journey-table">
+            <colgroup>
+              <col class="jt-fc-w">
+              <col>
+              <col class="jt-lc-w">
+            </colgroup>
             <tr>
               <th>Thing</th>
               <th>Notes</th>
@@ -53,18 +58,26 @@
             </tr>
             <tr class="jt-build">
               <td>Build and calibration</td>
-              <td>Lots of content available online for this so head over to my calibration page to find out more</td>
-              <td><a href="../../calibration/index.html">Calibration</a></td>
+              <td>
+                <ul class="jt-list">
+                  <li>Lots of content available online for this so head over to my calibration page to find out more</li>
+                </ul>
+              </td>
+              <td><ul class="jt-list"><li><a href="../../calibration/index.html">Calibration</a></li></ul></td>
             </tr>
             <tr class="jt-build">
               <td>Manal bed levelling</td>
-              <td>The first step after building and the only thing you need to do before your first print</td>
-              <td>Sweden</td>
+              <td>
+                <ul class="jt-list">
+                  <li>The first step after building and the only thing you need to do before your first print</li>
+                </ul>
+              </td>
+              <td></td>
             </tr>
             <tr class="jt-issue">
               <td>Broken hotend</td>
               <td>
-                <ul>
+                <ul class="jt-list">
                   <li>The first issue I faced right after my first test print, a heating error on the lcd screen</li>
                   <li>Warning: be careful, there's 240V in the electronics box when the printer is turned on</li>
                   <li>Broke out the multimeter and found out that the hotend thermister had an acceptable resistance of ~72 k&#8486, so that wasn't the culptit</li>
@@ -72,13 +85,22 @@
                   <li>I ordered a generic Creality-type hotend from Amazon for £15, one day a four solder joints later and we're back up and running</li>
                 </ul>
               </td>
-              <td><a href="https://www.amazon.co.uk/gp/product/B07XM637F5/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">Generic Creality hotend</a></td>
+              <td>
+                <ul class="jt-list">
+                  <li><a href="https://www.amazon.co.uk/gp/product/B07XM637F5/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">Generic hotend</a></li>
+                </ul>
+              </td>
             </tr>
             <tr class="jt-test">
               <td>Overall test print</td>
-              <td>Benchy and Calibration cube</td>
               <td>
-                <ul>
+                <ul class="jt-list">
+                  <li>Benchy</li>
+                  <li>Calibration cube</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="jt-list">
                   <li><a href="https://www.thingiverse.com/thing:763622">3D Benchy</a></li>
                   <li><a href="https://www.thingiverse.com/thing:2939079">Calibration cube</a></li>
                 </ul>
@@ -86,9 +108,13 @@
             </tr>
             <tr class="jt-mod">
               <td>Creality glass bed</td>
-              <td>Didn't have any adhesion issues with the magnetic bed, but the glass bed was definitely flatter with no noticable warping.  Attached with picture-frame clips instead of the classic bulldog clips as they're a much lower profile and take up less space on the bed.</td>
               <td>
-                <ul>
+                <ul class="jt-list">
+                  <li>Didn't have any adhesion issues with the magnetic bed, but the glass bed was definitely flatter with no noticable warping.  Attached with picture-frame clips instead of the classic bulldog clips as they're a much lower profile and take up less space on the bed.</li>
+                </ul>
+              </td>
+              <td>
+                <ul class="jt-list">
                   <li><a href="https://www.amazon.co.uk/gp/product/B089B76DW4/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">Glass bed</a></li>
                   <li><a href="https://www.amazon.co.uk/gp/product/B0747QV3Y7/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">Picture-frame clips</a></li>
                 </ul>
@@ -97,27 +123,53 @@
             <tr class="jt-build">
               <td>E-steps calibration</td>
               <td></td>
-              <td><a href="../../calibration/index.html">Calibration</a></td>
+              <td>
+                <ul class="jt-list">
+                  <li><a href="../../calibration/index.html">Calibration</a></li>
+                </ul>
+              </td>
             </tr>
             <tr class="jt-build">
               <td>Retraction settings</td>
               <td></td>
-              <td><a href="../../calibration/index.html">Calibration</a></td>
+              <td>
+                <ul class="jt-list">
+                  <li><a href="../../calibration/index.html">Calibration</a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="jt-test">
+              <td>Iterative test print</td>
+              <td>
+                <ul class="jt-list">
+                  <li>Retraction test</li>
+                </ul>
+              </td>
+              <td></td>
             </tr>
             <tr class="jt-issue">
               <td>Hotend clogging</td>
+              <td>
+                <ul class="jt-list">
+                  <li>Hotend is clogging during the retraction test with any values (tested from 4mm upwards)</li>
+                  <li>Changed to a new Capricorn tube and fittings with no improvement</li>
+                  <li>Likely cause is repeated retractions with very little continuous extrusion in between to clean out any melted filament</li>
+                  <li>Seems like the only real way to fix this is to reduce extrusion distance, but I can't do that without introducing overwhelming stringing</li>
+                  <li>To reduce retraction I either need (hopefully) a shorter bowded tube, or direct drive.  Let's start with the minimally invasive shorter bowden tube</li>
+                  <li>Need to move the extruder for this, but there's a few things I want to do first.  Luckily all the next set of mods won't require many retractions with combing turned on so I'll crack on with those and get to the extruder mount soon</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr>
-              <td>North/South</td>
-              <td>Simon Crowther</td>
-              <td>UK</td>
-            </tr>
-            <tr>
-              <td>Paris spécialités</td>
-              <td>Marie Bertrand</td>
-              <td>France</td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
           </table>
       

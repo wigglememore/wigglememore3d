@@ -1,6 +1,6 @@
 /*  basic styling   */
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
   }
 
 /* container styles */
@@ -113,6 +113,14 @@ a {
     background-color: white;
   }
 
+.journey-table .jt-fc-w {
+    width: 180px;
+}
+
+.journey-table .jt-lc-w {
+    width: 170px;
+}
+
 .journey-table tr.jt-build td {
     background-color: #D8D3D6;
 }
@@ -132,6 +140,18 @@ a {
 .journey-table tr.jt-future td {
     background-color: #A8F29A;
 }
+
+.jt-list{
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.jt-list li{
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+}
+
 /* footer styles */
 .footer {
     background: #2d5986;
