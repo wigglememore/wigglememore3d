@@ -104,6 +104,7 @@ a {
 /* table styles */
 .journey-table {
     border-collapse: collapse;
+    margin-bottom: 30px;
   }
   
 .journey-table td, th {
