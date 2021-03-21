@@ -40,6 +40,16 @@ a {
     text-decoration: none;
 }
 
+/* inline link styles */
+a.inline-link:link {
+    text-decoration: none;
+}
+
+a.inline-link:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
 /* menu styles */
 .navbar {
     overflow: hidden;
