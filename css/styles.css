@@ -158,6 +158,14 @@ a.inline-link:hover {
     font-family: Helvetica, sans-serif;
 }
 
+/* test print image styles */
+.test-photos img {
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+  }
+
 /* footer styles */
 .footer {
     background: #2d5986;
