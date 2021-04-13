@@ -54,98 +54,85 @@
         <p>Whole number - printer mod or change</p>
         <p>Tenths - test type change, e.g. moving from testing retraction settings to overall test prints</p>
         <p>Hundrenths - change within test, e.g. changing retraction settings during stringing testing</p>
-        <ul class="collapse-list">
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-1">
-            <label class="collapse-btn" for="collapse-1">Stock printer - overall test prints</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>These three prints were made immediately after building and levelling the bed; no calibration steps were completed apart from bed levelling.
-                   They're obviously not perfect, and there are obviously lots of improvements to be made, but for £250 this is incredible!</p>
-                <h3>1.00 - Calibration Cube</h3>
-                <div class="test-photos">
-                  <img src="img/1-00_1.jpg" alt="1.00_1">
-                  <img src="img/1-00_2.jpg" alt="1.00_2">
-                  <img src="img/1-00_3.jpg" alt="1.00_3">
-                  <img src="img/1-00_4.jpg" alt="1.00_4">
-                  <img src="img/1-00_5.jpg" alt="1.00_5">
-                  <img src="img/1-00_6.jpg" alt="1.00_6">
-                </div>
-                <h3>1.01 - 3D Benchy</h3>
-                <div class="test-photos">
-                  <img src="img/1-01_1.jpg" alt="1.01_1">
-                  <img src="img/1-01_2.jpg" alt="1.01_2">
-                  <img src="img/1-01_3.jpg" alt="1.01_3">
-                  <img src="img/1-01_4.jpg" alt="1.01_4">
-                  <img src="img/1-01_5.jpg" alt="1.01_5">
-                  <img src="img/1-01_6.jpg" alt="1.01_6">
-                  <img src="img/1-01_7.jpg" alt="1.01_7">
-                  <img src="img/1-01_8.jpg" alt="1.01_8">
-                </div>
-                <h3>1.02 - Mirco all-in-one</h3>
-                <div class="test-photos">
-                  <img src="img/1-02_1.jpg" alt="1.02_1">
-                  <img src="img/1-02_2.jpg" alt="1.02_2">
-                  <img src="img/1-02_3.jpg" alt="1.02_3">
-                  <img src="img/1-02_4.jpg" alt="1.02_4">
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-2">
-            <label class="collapse-btn" for="collapse-2">Stock printer - stringing tests</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>Clearly these are not good.  Even the prints without much strining, a closer look reveals that there is severe (what looks like) underextrusion, 
-                  and even failures where it stops extruding all together towards the tips.  My first and the obvious conclusion was that the repeated & close extrusions are
-                  pulling melted plastic back up the bowden tube, and it is eventually blocking the nozzle; this was confirmed (or so I though) when I took apart the hotend,
-                  cleaned it out and replaced the nozzle, and the clog was fixed.  This problem meant I avoided having multiple parts on the bed in one print unless I cloud
-                  use Cura's print-one-at-a-time-setting, which limits productivity.</p>
-                <p>The above conclusion was incorrect.  The actual cause was that the tension spring on the extruder was too tight, and was crushing the filament.  For continuous
-                  extrusion this was not causing any issues, however with the repeated & close extractions the filament crushing was becoming significant enough that it got stuck
-                  in the bowden tube, causing the underextrusion and eventually print failures that I saw.  Checkout the <a href="../journey/index.html">Journey</a> page to see 
-                  how I fixed this, and the next test-print section to see the results.
-                </p>
-                <h3>1.10 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/1-10_1.jpg" alt="1.10_1">
-                  <img src="img/1-10_2.jpg" alt="1.10_2">
-                </div>
-                <h3>1.11 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/1-11_1.jpg" alt="1.11_1">
-                  <img src="img/1-11_2.jpg" alt="1.11_2">
-                </div>
-                <h3>1.13 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/1-13_1.jpg" alt="1.13_1">
-                  <img src="img/1-13_2.jpg" alt="1.13_2">
-                </div>
-                <h3>1.15 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/1-15_1.jpg" alt="1.15_1">
-                  <img src="img/1-15_2.jpg" alt="1.15_2">
-                </div>
-                <h3>1.16 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/1-16_1.jpg" alt="1.16_1">
-                  <img src="img/1-16_2.jpg" alt="1.16_2">
-                </div>
-                <h3>1.17 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/1-17_1.jpg" alt="1.17_1">
-                  <img src="img/1-17_2.jpg" alt="1.17_2">
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-3">
-            <label class="collapse-btn" for="collapse-3">Bed supports, corner braces, top mounted extruder and extruder spring mods - stringing tests</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>Explanation</p>
+        
+        <button class="accordion">Stock printer - overall test prints - 1.0x</button>
+        <div class="panel">
+          <p>These three prints were made immediately after building and levelling the bed; no calibration steps were completed apart from bed levelling.
+            They're obviously not perfect, and there are obviously lots of improvements to be made, but for £250 this is incredible!</p>
+         <h3>1.00 - Calibration Cube</h3>
+         <div class="test-photos">
+           <img src="img/1-00_1.jpg" alt="1.00_1">
+           <img src="img/1-00_2.jpg" alt="1.00_2">
+           <img src="img/1-00_3.jpg" alt="1.00_3">
+           <img src="img/1-00_4.jpg" alt="1.00_4">
+           <img src="img/1-00_5.jpg" alt="1.00_5">
+           <img src="img/1-00_6.jpg" alt="1.00_6">
+         </div>
+         <h3>1.01 - 3D Benchy</h3>
+         <div class="test-photos">
+           <img src="img/1-01_1.jpg" alt="1.01_1">
+           <img src="img/1-01_2.jpg" alt="1.01_2">
+           <img src="img/1-01_3.jpg" alt="1.01_3">
+           <img src="img/1-01_4.jpg" alt="1.01_4">
+           <img src="img/1-01_5.jpg" alt="1.01_5">
+           <img src="img/1-01_6.jpg" alt="1.01_6">
+           <img src="img/1-01_7.jpg" alt="1.01_7">
+           <img src="img/1-01_8.jpg" alt="1.01_8">
+         </div>
+         <h3>1.02 - Mirco all-in-one</h3>
+         <div class="test-photos">
+           <img src="img/1-02_1.jpg" alt="1.02_1">
+           <img src="img/1-02_2.jpg" alt="1.02_2">
+           <img src="img/1-02_3.jpg" alt="1.02_3">
+           <img src="img/1-02_4.jpg" alt="1.02_4">
+         </div>
+        </div>
+        <button class="accordion">Stock printer - stringing tests - 1.1x</button>
+        <div class="panel">
+          <p>Clearly these are not good.  Even the prints without much strining, a closer look reveals that there is severe (what looks like) underextrusion, 
+            and even failures where it stops extruding all together towards the tips.  My first and the obvious conclusion was that the repeated & close extrusions are
+            pulling melted plastic back up the bowden tube, and it is eventually blocking the nozzle; this was confirmed (or so I though) when I took apart the hotend,
+            cleaned it out and replaced the nozzle, and the clog was fixed.  This problem meant I avoided having multiple parts on the bed in one print unless I cloud
+            use Cura's print-one-at-a-time-setting, which limits productivity.</p>
+          <p>The above conclusion was incorrect.  The actual cause was that the tension spring on the extruder was too tight, and was crushing the filament.  For continuous
+            extrusion this was not causing any issues, however with the repeated & close extractions the filament crushing was becoming significant enough that it got stuck
+            in the bowden tube, causing the underextrusion and eventually print failures that I saw.  Checkout the <a href="../journey/index.html">Journey</a> page to see 
+            how I fixed this, and the next test-print section to see the results.
+          </p>
+          <h3>1.10 - Stringing</h3>
+          <div class="test-photos">
+            <img src="img/1-10_1.jpg" alt="1.10_1">
+            <img src="img/1-10_2.jpg" alt="1.10_2">
+          </div>
+          <h3>1.11 - Stringing</h3>
+          <div class="test-photos">
+            <img src="img/1-11_1.jpg" alt="1.11_1">
+            <img src="img/1-11_2.jpg" alt="1.11_2">
+          </div>
+          <h3>1.13 - Stringing</h3>
+          <div class="test-photos">
+            <img src="img/1-13_1.jpg" alt="1.13_1">
+            <img src="img/1-13_2.jpg" alt="1.13_2">
+          </div>
+          <h3>1.15 - Stringing</h3>
+          <div class="test-photos">
+            <img src="img/1-15_1.jpg" alt="1.15_1">
+            <img src="img/1-15_2.jpg" alt="1.15_2">
+          </div>
+          <h3>1.16 - Stringing</h3>
+          <div class="test-photos">
+            <img src="img/1-16_1.jpg" alt="1.16_1">
+            <img src="img/1-16_2.jpg" alt="1.16_2">
+          </div>
+          <h3>1.17 - Stringing</h3>
+          <div class="test-photos">
+            <img src="img/1-17_1.jpg" alt="1.17_1">
+            <img src="img/1-17_2.jpg" alt="1.17_2">
+          </div>
+        </div>
+        <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - stringing tests - 2.0x</button>
+        <div class="panel">
+          <p>Explanation</p>
                 <h3>2.00 - Stringing</h3>
                 <div class="test-photos">
                   <img src="img/2-00_1.jpg" alt="2.00_1">
@@ -161,71 +148,80 @@
                   <img src="img/2-02_1.jpg" alt="2.02_1">
                   <img src="img/2-02_2.jpg" alt="2.02_2">
                 </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-4">
-            <label class="collapse-btn" for="collapse-4">Bed supports, corner braces, top mounted extruder and extruder spring mods - overall test prints</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>Explanation</p>
-                <h3>2.10 - Micro all-in-one</h3>
-                <div class="test-photos">
-                  <img src="img/2-10_1.jpg" alt="2.10_1">
-                  <img src="img/2-10_2.jpg" alt="2.10_2">
-                  <img src="img/2-10_3.jpg" alt="2.10_3">
-                  <img src="img/2-10_4.jpg" alt="2.10_4">
-                </div>
-                <h3>2.11 - 3D Benchy</h3>
-                <div class="test-photos">
-                  <img src="img/2-11_1.jpg" alt="2.11_1">
-                  <img src="img/2-11_2.jpg" alt="2.11_2">
-                  <img src="img/2-11_3.jpg" alt="2.11_3">
-                  <img src="img/2-11_4.jpg" alt="2.11_4">
-                  <img src="img/2-11_5.jpg" alt="2.11_5">
-                  <img src="img/2-11_6.jpg" alt="2.11_6">
-                  <img src="img/2-11_7.jpg" alt="2.11_7">
-                  <img src="img/2-11_8.jpg" alt="2.11_8">
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-5">
-            <label class="collapse-btn" for="collapse-5">Test prints</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>hidden content</p>
-              </div>
-            </div>
-          </li>
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-6">
-            <label class="collapse-btn" for="collapse-6">Test prints</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>hidden content</p>
-              </div>
-            </div>
-          </li>
-          <!-- save this li section for the template -->
-          <li>
-            <input class="collapse-open" type="checkbox" id="collapse-999">
-            <label class="collapse-btn" for="collapse-999">Test prints</label>
-            <div class="collapse-painel">
-              <div class="collapse-inner">
-                <p>hidden content</p>
-              </div>
-            </div>
-          </li>
-      </ul>
+        </div>
+        <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - stringing tests - 2.1x</button>
+        <div class="panel">
+          <p>Explanation</p>
+          <h3>2.10 - Micro all-in-one</h3>
+          <div class="test-photos">
+            <img src="img/2-10_1.jpg" alt="2.10_1">
+            <img src="img/2-10_2.jpg" alt="2.10_2">
+            <img src="img/2-10_3.jpg" alt="2.10_3">
+            <img src="img/2-10_4.jpg" alt="2.10_4">
+          </div>
+          <h3>2.11 - 3D Benchy</h3>
+          <div class="test-photos">
+            <img src="img/2-11_1.jpg" alt="2.11_1">
+            <img src="img/2-11_2.jpg" alt="2.11_2">
+            <img src="img/2-11_3.jpg" alt="2.11_3">
+            <img src="img/2-11_4.jpg" alt="2.11_4">
+            <img src="img/2-11_5.jpg" alt="2.11_5">
+            <img src="img/2-11_6.jpg" alt="2.11_6">
+            <img src="img/2-11_7.jpg" alt="2.11_7">
+            <img src="img/2-11_8.jpg" alt="2.11_8">
+          </div>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+          <p>content</p>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+          <p>content</p>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+         <p>content</p>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+          <p>content</p>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+          <p>content</p>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+         <p>content</p>
+        </div>
+        <button class="accordion">title</button>
+        <div class="panel">
+          <p>content</p>
+        </div>
       </div>
       <!-- footer -->
       <footer class="footer">
         <p>&copy; Copyright Notice</p>
       </footer>
-
     </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+    </script>
+
   </body>
 </html>
