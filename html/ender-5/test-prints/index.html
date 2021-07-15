@@ -55,9 +55,18 @@
         
         <button class="accordion">Stock printer - overall test prints - 1.0x</button>
         <div class="panel">
+          <p>Stock Cura PLA profile with 205/55 degC, 20mm/s, 20% infill and a skirt for bed adhesion.</p>
           <p>These three prints were made immediately after building and levelling the bed; no calibration steps were completed apart from bed levelling.
             They're obviously not perfect, and there are obviously lots of improvements to be made, but for £250 this is incredible!</p>
          <h3>1.00 - Calibration Cube</h3>
+         <ul>
+           <li>Good bed adhesion</item>
+           <li>Top and bottom layers are smooth with no visible imperfections</li>
+           <li>x, y and z letters are clear with sharp line, although the gloss white makes things hard to see</li>
+           <li>Sides look reasonably smooth, possible banding every 2.5cm</li>
+           <li>Vertical edges have slight buldging</li>
+           <li>Small gaps on top and bottom of square feature, possibly due to poor wall thickness in the model, or poor overhangs/bridging</li>
+         </ul>
          <div class="test-photos">
            <img src="img/1-00_1.jpg" alt="1.00_1">
            <img src="img/1-00_2.jpg" alt="1.00_2">
@@ -67,6 +76,9 @@
            <img src="img/1-00_6.jpg" alt="1.00_6">
          </div>
          <h3>1.01 - 3D Benchy</h3>
+         <ul>
+           <li>Writing not perfectly clear on the bottom layer</li>
+         </ul>
          <div class="test-photos">
            <img src="img/1-01_1.jpg" alt="1.01_1">
            <img src="img/1-01_2.jpg" alt="1.01_2">
@@ -78,6 +90,15 @@
            <img src="img/1-01_8.jpg" alt="1.01_8">
          </div>
          <h3>1.02 - Mirco all-in-one</h3>
+         <ul>
+           <li>2hrs 20mins</li>
+           <li>Good bed adhesion</li>
+           <li>Significant stringing hroughout</li>
+           <li>Small layer shift approximately 1cm up</li>
+           <li>Overhangs are generally okay</li>
+           <li>Should have printed with higher infill, at least 30%</li>
+           <li>Calibrate retraction settings</li>
+         </ul>
          <div class="test-photos">
            <img src="img/1-02_1.jpg" alt="1.02_1">
            <img src="img/1-02_2.jpg" alt="1.02_2">
@@ -98,31 +119,70 @@
             how I fixed this, and the next test-print section to see the results.
           </p>
           <h3>1.10 - Stringing</h3>
+          <ul>
+            <li>205/60 degC, retraction 5mm at 40mm/s</li>
+            <li>Significant stringing</li>
+            <li>Bobbling on the strings close to the parts</li>
+          </ul>
           <div class="test-photos">
             <img src="img/1-10_1.jpg" alt="1.10_1">
             <img src="img/1-10_2.jpg" alt="1.10_2">
           </div>
           <h3>1.11 - Stringing</h3>
-          <div class="test-photos">
+          <ul>
+            <li>205/60 degC, retraction 8mm at 40mm/s</li>
+            <li>Significant improvement on stringing</li>
+            <li>Surfaces are less smooth, especially at the top</li>
+          </ul>
+            <div class="test-photos">
             <img src="img/1-11_1.jpg" alt="1.11_1">
             <img src="img/1-11_2.jpg" alt="1.11_2">
           </div>
           <h3>1.13 - Stringing</h3>
+          <ul>
+            <li>200/60 degC, retraction 8mm at 40mm/s</li>
+            <li>No significant change</li>
+          </ul>
           <div class="test-photos">
             <img src="img/1-13_1.jpg" alt="1.13_1">
             <img src="img/1-13_2.jpg" alt="1.13_2">
           </div>
+          <h3>1.14 - Stringing</h3>
+          No amount of bed levelleing could get this to stick
           <h3>1.15 - Stringing</h3>
+          <ul>
+            <li>205/60 degC, retraction 10mm at 40mm/s</li>
+            <li>Print is bad from half way up, with significant underextrusion and inconsistent surface</li>
+            <li>Jam for the last ten layers</li>
+            <ul>
+              <li>Could be the repeated short extrusions pulling lots of melted filament through the heat break and into the bowden tube, 
+                  with not enough long periods of extrusion to clear it.  Upon disassembly to clear the clog, there is lots of hardened filament in the bowden tube.</li>
+              <li>I think the more likely scenario is that the extruder spring is too tight, so the repreated short and close retractions are crushing the filament, 
+                  distorting it enough that it gets stuck in the small tolerances of the bowden tube, causing the appearance of a clog.</li>
+              <li>Will repeat a few more tests with a better filament before making any changes.</li>
+            </ul>
+          </ul>
           <div class="test-photos">
             <img src="img/1-15_1.jpg" alt="1.15_1">
             <img src="img/1-15_2.jpg" alt="1.15_2">
           </div>
           <h3>1.16 - Stringing</h3>
+          <ul>
+            <li>eSun PLA+ Orange</li>
+            <li>215/60 degC, retracton 10mm at 60mm/s</li>
+            <li>Pretty first half, with smooth walls and no stringing</li>
+            <li>Top half of the print leaves a lot to be desired</li>
+          </ul>
           <div class="test-photos">
             <img src="img/1-16_1.jpg" alt="1.16_1">
             <img src="img/1-16_2.jpg" alt="1.16_2">
           </div>
           <h3>1.17 - Stringing</h3>
+          <ul>
+            <li>eSun PLA+ Orange</li>
+            <li>205/60 degC, retraction 9mm at 30mm/s (this was not a great change, retraction speed should generally go up with retraction distance)</li>
+            <li>Similar jam to 1.15 for the top of the print</li>
+          </ul>
           <div class="test-photos">
             <img src="img/1-17_1.jpg" alt="1.17_1">
             <img src="img/1-17_2.jpg" alt="1.17_2">
@@ -130,27 +190,48 @@
         </div>
         <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - stringing tests - 2.0x</button>
         <div class="panel">
-          <p>Explanation</p>
-                <h3>2.00 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/2-00_1.jpg" alt="2.00_1">
-                  <img src="img/2-00_2.jpg" alt="2.00_2">
-                </div>
-                <h3>2.01 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/2-01_1.jpg" alt="2.01_1">
-                  <img src="img/2-01_2.jpg" alt="2.01_2">
-                </div>
-                <h3>2.02 - Stringing</h3>
-                <div class="test-photos">
-                  <img src="img/2-02_1.jpg" alt="2.02_1">
-                  <img src="img/2-02_2.jpg" alt="2.02_2">
-                </div>
+          <p>Lots of changes here, all at the same time (definitely not the correct way to mod your printer) however they mainly have to impacts: the bed supports and
+          corner braces increase rigidity, reducing banding or layer inconsistencies and the top mounted extruder and extruder spring mod should fix the retraction/clogging issue seen in the 1.1x prints.</p>
+          <h3>2.00 - Stringing</h3>
+          <ul>
+            <li>208/65 degC - retraction 2mm at 45mm/s</li>
+            <li>Lots of stringing as expected with such low retraction but I wanted to see where the limit was, and how quickly the quality reduces</li>
+            <li>Interestingly all of the blobs on the strings occur where the nozzle comes onto the parts, not off of it.  I think this is something which linear advance will fix.</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/2-00_1.jpg" alt="2.00_1">
+            <img src="img/2-00_2.jpg" alt="2.00_2">
+          </div>
+          <h3>2.01 - Stringing</h3>
+          <ul>
+            <li>208/65 degC - retraction 3mm at 45mm/s</li>
+            <li>Going in the right direction, but retraction needs to be increased more</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/2-01_1.jpg" alt="2.01_1">
+            <img src="img/2-01_2.jpg" alt="2.01_2">
+          </div>
+          <h3>2.02 - Stringing</h3>
+          <ul>
+            <li>208/65 degC - retraction 6mm at 45mm/s</li>
+            <li>Looking much better over the majority of the print</li>
+            <li>This test has such tiny print areas at the top of the cones that I'm ignoring the stringing/blobbing on those sections and settling on 6mm retraction</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/2-02_1.jpg" alt="2.02_1">
+            <img src="img/2-02_2.jpg" alt="2.02_2">
+          </div>
         </div>
-        <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - stringing tests - 2.1x</button>
+        <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - overall tests - 2.1x</button>
         <div class="panel">
           <p>Explanation</p>
           <h3>2.10 - Micro all-in-one</h3>
+          <ul>
+            <li>Stock PLA profile, 0.2mm layer height, 0.4mm width with 0.4mm nozzle</li>
+            <li>2 wall, 4 top and bottom layers wtih 20% infill</li>
+            <li>208/65 degC and 6mm/45mm/s retraction as before, with 60mm/s print, 25mm/s walls and 18mm/s initial layer</li>
+            <li>This print looks great!  All the writing is readable, small features are clean and well defined, overhangs are almost perfect all the way to 80 degrees, bridges have very little sag and there is no stringing.</li>
+          </ul>
           <div class="test-photos">
             <img src="img/2-10_1.jpg" alt="2.10_1">
             <img src="img/2-10_2.jpg" alt="2.10_2">
@@ -158,6 +239,11 @@
             <img src="img/2-10_4.jpg" alt="2.10_4">
           </div>
           <h3>2.11 - 3D Benchy</h3>
+          <ul>
+            <li>Same print settings as the previous print and the quality is similarly great</li>
+            <li>The writing on the back is not particularly clear and there are some horizomtal lines on the hull, but the overhangs look great and there is no stringing</li>
+            <li>Definitely my best benchy to date</li>
+          </ul>
           <div class="test-photos">
             <img src="img/2-11_1.jpg" alt="2.11_1">
             <img src="img/2-11_2.jpg" alt="2.11_2">
@@ -171,14 +257,24 @@
         </div>
         <button class="accordion">Triple z-axis mod - z-perpendicularity(?) and consistency tests - 3.0x</button>
         <div class="panel">
-          <p>Explanation</p>
+          <p>These prints are to test the triple z-axis mod I have designed, printed and installed on my Ender 5.  If things are not perfectly vertical then I expect artifacts to be present in the z-direction.</p>
           <h3>3.00 - Vase</h3>
+          <ul>
+            <li>eSun PLA+ Magenta at 80mm/s in vase mode</li>
+            <li>No artifacts present, and in fact the print is so clean that I can see what I believe to be the triangles from the discretisation of the model into an stl</li>
+            <li>Need to print something similar over the full z height after the mod (around 285mm) but promising results to far</li>
+            <li>Also my first vase mode print and I think it is great.  The print is super strong and doesn't have any seams, and is plenty sturdy with some water in.</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-00_1.jpg" alt="3.00_1">
             <img src="img/3-00_2.jpg" alt="3.00_2">
             <img src="img/3-00_3.jpg" alt="3.00_3">
           </div>
           <h3>3.00 - 3D Benchy</h3>
+          <ul>
+            <li>Same print setting as the 2.11 benchy but at 80mm/s print, 40mm/s walls and 200mm/s travel</li>
+            <li>Slightly more stringing that at the lower speed, but generally still a very good print.  I think as print speed increases so should retraction speed to maintain quality.</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-01_1.jpg" alt="3.01_1">
             <img src="img/3-01_2.jpg" alt="3.01_2">
@@ -192,8 +288,13 @@
         </div>
         <button class="accordion">eSun Marble PLA filament - temperature and retraction tuning - 3.1x</button>
         <div class="panel">
-          <p>Explanation</p>
+          <p>My next big project was 3D printing my brain, a task for which I selected eSun eMarble PLA filament.  A material which has gorgeous marble like flecking and hides layer lines well.
+              Obviously I wasn't going to start a three day print without trusing my settings, so here goes the calibration.</p>
           <h3>3.10 - xyz cube</h3>
+          <ul>
+            <li>First test was at 205/65 degC, 70mm/s with 4mm retraction, similar settings to how I print eSun PLA+</li>
+            <li>The xyz cube looks okay, some small bulging on the corners and slight drooping on the bridging, so I'll turn the temperature down for the next print</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-10_1.jpg" alt="3.10_1">
             <img src="img/3-10_2.jpg" alt="3.10_2">
@@ -202,11 +303,19 @@
             <img src="img/3-10_5.jpg" alt="3.10_5">
           </div>
           <h3>3.11 - Mirco all-in-one</h3>
+          <ul>
+            <li>Same settings as before but at 200 degC</li>
+            <li>What a hot mess this is, looks more like blob-city than a classic calibration test.  The temperature must still be way too hot.</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-11_1.jpg" alt="3.11_1">
             <img src="img/3-11_2.jpg" alt="3.11_2">
           </div>
           <h3>3.12 - 3D Benchy</h3>
+          <ul>
+            <li>Reduced the temp to 190 degC and kept the 6mm retraction</li>
+            <li>Vastly improved, but there is still some stringing which I would like to get rid of</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-12_1.jpg" alt="3.12_1">
             <img src="img/3-12_2.jpg" alt="3.12_2">
@@ -218,11 +327,19 @@
             <img src="img/3-12_8.jpg" alt="3.12_8">
           </div>
           <h3>3.13 - 3D Benchy</h3>
+          <ul>
+            <li>This is what happens when you forget you had vase mode on and try to print a benchy...</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-13_1.jpg" alt="3.13_1">
             <img src="img/3-13_2.jpg" alt="3.13_2">
           </div>
           <h3>3.14 - 3D Benchy</h3>
+          <ul>
+            <li>190/65 degC, 7.5mm at 55mm/s retraction</li>
+            <li>This looks a lot better so I'll use these as the final settings for eMarble</li>
+            <li>Still slightly hesitant at the high retraction, configuring linear advance would probably help, but we'll see how it goes</li>
+          </ul>
           <div class="test-photos">
             <img src="img/3-14_1.jpg" alt="3.14_1">
             <img src="img/3-14_2.jpg" alt="3.14_2">
