@@ -43,3 +43,8 @@
     padding: 5px;
     width: 250px;
 }
+
+/* test image table styles */
+table {
+    border-collapse: collapse;
+}
