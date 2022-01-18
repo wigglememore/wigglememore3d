@@ -91,7 +91,40 @@
         </div>
         <button class="accordion">Bigtreetech GTR and TFT screen</button>
         <div class="panel">
-          <p>content</p>
+          <p>This was a big one.  To allow for future expandability (mainly the triple z-axis) I needed more stepper motor drivers, and I chose the Bigtreetech GTR.  If you choose to do this kind of upgrade you will probably get a lot of errors, the main advice I can give is stay calm, read the error messages and google it.</p>
+          <p>The first issue I faced was the board not talking to the PC.  This one was fairly easy, downloaded the drivers from the Bigtreetech github page and restarted the computer, easy!</p>
+          <p>The TFT screen, what a whirlwind.  These are the errors I faced and how I fixed them:
+            <ul>
+              <li>TFT emulation mode broken<ul>
+                <li>One fix mentioned online was moving the scroll wheel - didn't work for me</li>
+                <li>Some changes to the Marlin code suggested (can't remember what they were unfortunately) - didn't work for me</li>
+                <li>Firmware update - suddenly started working, whether it was the update, initial lack of patience or suddenly the scroll wheel fix we will never know - fixed!</li>
+                </ul></li>
+              <li>Firmware update resulted in repeatedly flashing screen<ul>
+                <li>Could have been because of too large an SD-card or some incorrectly plugged in wires, we will never know which - fixed!</li>
+              </ul></li>
+              <li>Firmware update stuck at 9%<ul>
+                <li>exp1 and exp2 wires plugged in the wrong way around - fixed!</li>
+              </ul></li>
+              <li>Missing settings in Marlin emulation mode menu<ul>
+                <li>Need to #define LCD_INFO_MENU in Configuration_adv.h - fixed!</li>
+                <li>Should probably shorten the custon names or come up with some kind of naming system</li>
+              </ul></li>
+            </ul></p>
+          <p>After checking the board still functions when connected to the 24V power it was time to put it into the printer and move on with the migration of all the other parts.<ul>
+              <li>You will need to know how to crimp JST connectors to make your own cables for basically every part that plugs into the mainboard, especially if you want them the correct length.  I started with <a href="https://www.youtube.com/watch?v=CV3O3zScbf4">this youtube video</a> and quicly became competant.</li>
+              <li>The 2-pin endstops that come with the printer needed to be plugged into the 3-pin headers on the board.  Really easy to move the pins into a 3-pin JST connector from the 2-pin, but you have to make sure to connect to the signal and ground pins on the motherboard, if you accidentally connect to Vcc and ground then activating the endstop will short voltage stragiht to ground - not a good idea</li>
+              <li>Heated bed wires - I needed to crimp new ferrule connectors onto the end of the bed heater because it came with tinned ends, got a cheap kit from amazon with the tool and a bunch of different sized ferrules and it worked great.  DO NOT tin wires that go into screw-down terminals, over time the solder will 'creep' causing the joint to fail leading excessive resistance and in sever cases, fire.</li>
+              <li>So during my first test print with the new setup - a benchy - lots of things happened:<ul>
+                <li>Hotend fan came on at 100% when heating the hotend, but all fans turned off when starting the print.  The gcode seemed to be controlling the hotend fan through the print (instead of it being on 100% permanently) and the part-cooling fan never turned on</li>
+                <li>The fix for this was easy (even though it took me a little while), the fans were just plugged in the wrong way around:<ul>
+                  <li>fan0 is the parts-cooling fan and is controlled by the gcode</li>
+                  <li>fan1 is the hotend fan which is now configured to come on at 100% any time the nozzle temp exceeds 40 degC</li>
+                  <li>fan2 I have configured as the controller fan and comes on at 50% (for noise control) and time any motor is running</li>
+                </ul></li>
+              </ul></li>
+            </ul>
+          </p>
         </div>
         <button class="accordion">Electronics mounting overhaul</button>
         <div class="panel">
@@ -101,6 +134,14 @@
              I also designed a patch panel to allow for quick-disconnects of components without touching connections on the mainboard.  To house everything I extended the rear, and bottom, 
              of the original frame by 50mm and mounted a hinged door to close it all up.  I'm currently designing the last few cover panels to house the fused power switch, cooling fans,
              and to seal it all up.</p>
+        </div>
+        <button class="accordion">Triple z-axis</button>
+        <div class="panel">
+          <p>content</p>
+        </div>
+        <button class="accordion">Direct-drive + all-metal hotend</button>
+        <div class="panel">
+          <p>content</p>
         </div>
         <button class="accordion">title</button>
         <div class="panel">
@@ -155,14 +196,6 @@
         <div class="panel">
           <p>Whilst I did install this before doing my triple z-axis upgrade, I didn't actually use it for anything other than z-homing as the Creality glass bed
              I use it almost perfectly flat.  I used <a href="https://www.thingiverse.com/thing:4076996">this great mount</a> to attach it to my stock Ender 5 hotend.</p>
-        </div>
-        <button class="accordion">title</button>
-        <div class="panel">
-          <p>content</p>
-        </div>
-        <button class="accordion">title</button>
-        <div class="panel">
-          <p>content</p>
         </div>
         <button class="accordion">title</button>
         <div class="panel">
