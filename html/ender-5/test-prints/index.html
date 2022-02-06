@@ -439,9 +439,8 @@
             <img src="img/4-31.jpg" alt="4.31">
           </div>
         </div>
-        <button class="accordion">PETG Calibration - 5.0x</button>
+        <button class="accordion">PETG Calibration - 5.xx</button>
         <div class="panel">
-          <p>Pictures to come soon</p>
           <h3>5.01 - Bed adhesion test (wtih Magigoo)</h3>
           <ul>
             <li>230/70 - first layer 0.2mm - Perfect adhesion, no warping, print popped off once the print bed hit around 40 degC, glassy smooth base.  A perfect print.</li>
@@ -502,11 +501,74 @@
             <img src="img/5-05_4.jpg" alt="5.05_4">
           </div>
         </div>
-        <button class="accordion">Title</button>
+        <button class="accordion">eSun Silk PLA Calibration - 6.xx</button>
         <div class="panel">
-          <p>content</p>
+          <h3>6.1x (x = 0,1,2,3) - Temperature tower</h3>
+          <ul>
+            <li>TeachingTech temperature test from 190 to 210 degC in 5 degC steps, 200 degC first layer and 65 degC bed temp, K = 0.07 and retraction = 1.0mm</li>
+            <li>6.10 failed (I think) due to a poor linear advance value because lots of material was being deposited near the start and end of extrusions with the print eventually being knocked over by the nozzle</li>
+            <li>6.11 was a repeat with me manually squashing the raised sections to stop the failure and 6.12 was with linear advance off, both failed in the same way</li>
+            <li>The last attempt before moving onto other settings was was to start at 180 degC instead of 190 but this changed nothing, clearly something else is wrong here</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/6-10.jpg" alt="6-10">
+            <img src="img/6-11.jpg" alt="6-11">
+            <img src="img/6-12.jpg" alt="6-12">
+            <img src="img/6-13.jpg" alt="6-13">
+          </div>
+          <h3>6.2x (x = 0,1) - Marlin Linear Advance</h3>
+          <ul>
+            <li>With my hypothesis from the temperature test already looking flakey I tried a linear advance test</li>
+            <li>6.20 was K = 0 to 2 in 0.2 steps and 6.21 was K = 0 to 0.4 in 0.02 steps</li>
+            <li>I still hate the Marlin LA test with all the lines but went with it and settled on a linear advance value of 0.07 (at 1500mm/s^2 and a jerk of (I think) 0.02)</li>
+            </ul>
+          <div class="test-photos">
+            <img src="img/6-20.jpg" alt="6-20">
+            <img src="img/6-21.jpg" alt="6-21">
+          </div>
+          <h3>6.30 - Retraction tower</h3>
+          <ul>
+            <li>TeachingTech retraction test from 0.4mm to 1.2mm in 0.2mm steps</li>
+            <li>Settled on a value of 1.0mm, seemed like a good compromise of printability and quality.</li>
+            </ul>
+          <div class="test-photos">
+            <img src="img/6-30.jpg" alt="6-30">
+          </div>
+          <h3>6.4x (x = 1,2) - 3D Benchy</h3>
+          <ul>
+            <li>A 3D Benchy to test out the settings I've chosen, getting kind of tense now as I need to print some parts for work in this filament and it still isn't working properly</li>
+            <li>Big nope, and another big nope</li>
+            <li>I started printing parts for work and it turns out that for this silk filament the retraction needs to be wayyyy lower, so we'll re-try some tests with this new knowledge</li>
+            </ul>
+          <div class="test-photos">
+            <img src="img/6-40.jpg" alt="6-40">
+            <img src="img/6-41.jpg" alt="6-41">
+          </div>
+          <h3>6.50 - Temperature Tower</h3>
+          <ul>
+            <li>TeachingTech temperature tower from 180 to 200 degC in 5 degC steps, 190 degC first layer and 65 degC bed temp; K = 0.07 and retraction = 0.4mm</li>
+            <li>The test completed which was the main goal, and I settled on a temperature of 190 degC as a good balance of quality and layer adhesion</li>
+            </ul>
+          <div class="test-photos">
+            <img src="img/6-50.jpg" alt="6-30">
+          </div>
+          <h3>6.6x (x = 1-8) - 3D Benchy</h3>
+          <ul>
+            <li>The Benchy is back with the same settings as test 6.50</li>
+            <li>Not the best Benchy I've ever printed, walls aren't super smooth and there were a few tiny tiny layer shifts but generally it looks pretty great, settings obtained!</li>
+            </ul>
+          <div class="test-photos">
+            <img src="img/6-60_1.jpg" alt="6-60_1">
+            <img src="img/6-60_2.jpg" alt="6-60_2">
+            <img src="img/6-60_3.jpg" alt="6-60_3">
+            <img src="img/6-60_4.jpg" alt="6-60_4">
+            <img src="img/6-60_5.jpg" alt="6-60_5">
+            <img src="img/6-60_6.jpg" alt="6-60_6">
+            <img src="img/6-60_7.jpg" alt="6-60_7">
+            <img src="img/6-60_8.jpg" alt="6-60_8">
+          </div>
         </div>
-        <button class="accordion">Title</button>
+        <button class="accordion">Amazon Basics TPU Calibration - 7.xx</button>
         <div class="panel">
           <p>content</p>
         </div>
