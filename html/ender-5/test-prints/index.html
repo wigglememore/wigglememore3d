@@ -521,7 +521,7 @@
             <li>With my hypothesis from the temperature test already looking flakey I tried a linear advance test</li>
             <li>6.20 was K = 0 to 2 in 0.2 steps and 6.21 was K = 0 to 0.4 in 0.02 steps</li>
             <li>I still hate the Marlin LA test with all the lines but went with it and settled on a linear advance value of 0.07 (at 1500mm/s^2 and a jerk of (I think) 0.02)</li>
-            </ul>
+          </ul>
           <div class="test-photos">
             <img src="img/6-20.jpg" alt="6-20">
             <img src="img/6-21.jpg" alt="6-21">
@@ -530,7 +530,7 @@
           <ul>
             <li>TeachingTech retraction test from 0.4mm to 1.2mm in 0.2mm steps</li>
             <li>Settled on a value of 1.0mm, seemed like a good compromise of printability and quality.</li>
-            </ul>
+          </ul>
           <div class="test-photos">
             <img src="img/6-30.jpg" alt="6-30">
           </div>
@@ -539,7 +539,7 @@
             <li>A 3D Benchy to test out the settings I've chosen, getting kind of tense now as I need to print some parts for work in this filament and it still isn't working properly</li>
             <li>Big nope, and another big nope</li>
             <li>I started printing parts for work and it turns out that for this silk filament the retraction needs to be wayyyy lower, so we'll re-try some tests with this new knowledge</li>
-            </ul>
+          </ul>
           <div class="test-photos">
             <img src="img/6-40.jpg" alt="6-40">
             <img src="img/6-41.jpg" alt="6-41">
@@ -548,7 +548,7 @@
           <ul>
             <li>TeachingTech temperature tower from 180 to 200 degC in 5 degC steps, 190 degC first layer and 65 degC bed temp; K = 0.07 and retraction = 0.4mm</li>
             <li>The test completed which was the main goal, and I settled on a temperature of 190 degC as a good balance of quality and layer adhesion</li>
-            </ul>
+          </ul>
           <div class="test-photos">
             <img src="img/6-50.jpg" alt="6-30">
           </div>
@@ -556,7 +556,7 @@
           <ul>
             <li>The Benchy is back with the same settings as test 6.50</li>
             <li>Not the best Benchy I've ever printed, walls aren't super smooth and there were a few tiny tiny layer shifts but generally it looks pretty great, settings obtained!</li>
-            </ul>
+          </ul>
           <div class="test-photos">
             <img src="img/6-60_1.jpg" alt="6-60_1">
             <img src="img/6-60_2.jpg" alt="6-60_2">
@@ -570,7 +570,72 @@
         </div>
         <button class="accordion">Amazon Basics TPU Calibration - 7.xx</button>
         <div class="panel">
-          <p>content</p>
+          <h3>7.10 - Temperature tower</h3>
+          <ul>
+            <li>TeachingTech temperature test from 210 to 230 in 5 degC steps</li>
+            <li>Linear advance off and 0.4mm retraction</li>
+            <li>30mm/s base feed rate, 18mm/s walls, 24mm/s infill, 50mm/s travel and 15mm/s first layer</li>
+            <li>First layer stuck really well, perhaps a little too well so will move the z-offset up a smidge and maybe re-apply the Magigoo</li>
+            <li>Temperature of 220 degC selected</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/7-10.jpg" alt="7-10">
+          </div>
+          <h3>7.20 - Retraction test</h3>
+          <ul>
+            <li>TeachingTech retraction test from 0mm to 0.8mm in 0.2mm steps with linear advance off</li>
+            <li>Retraction of 0.4mm selected, print was again extremely hard to get off the bed, maybe try reduing the bed temp from 60 degC (turns out this is way too hot for TPU)</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/7-20.jpg" alt="7-20">
+          </div>
+          <h3>7.3x (x = 1, 2, 3) - Linear advance test</h3>
+          <ul>
+            <li>Marlin linear advance test that I hate</li>
+            <li>7.30 I stopped printing after the first line because there probably isn't enough consistent extrusion for the flexible filament as the lines were too short</li>
+            <li>For 7.31 I increased the line length but the default z-motion in the test is too fast for my janky triple-z setup so the nozzle was at the wrong height due to leadscrew binding</li>
+            <li>Nozzle was a bit too close for 7.32 but something like K = 0.4 is suggested</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/7-31.jpg" alt="7-31">
+          </div>
+          <h3>7.33 - Linear advance test</h3>
+          <ul>
+            <li>I used the stl from the Klipper pressure advance test, sliced it with their settings then made a short python script to add in the changing linear advance value on layer change.  The script is below, you have to change the extension to .txt then back to .gcode after the operation.</li>
+            <li><div data-include="python_script_html_include.html"></div></li>
+            <li>This is 1000% better than the Marlin linear advance test and everyone should do it instead of using the awful line thing</li>
+            <li>K = 1.5.6mm high / 0.3mm per layer * 0.01 K change per layer = 0.52.  K selected!</li>
+          </ul>
+          <pre>
+            <code>
+              a_file = open("square_tower.txt", "r")
+              list_of_lines = a_file.readlines()
+              k = 0
+              for index, line in enumerate(list_of_lines):
+                  if line == "M900 K\n":
+                      k = round(k + 0.01, 2)
+                      list_of_lines[index] = line.strip() + str(k) + "\n"
+
+              a_file = open("square_tower.txt", "w")
+              a_file.writelines(list_of_lines)
+              a_file.close()
+            </code>
+          </pre>
+          <h3>7.4x (x = 1-8) - 3D Benchy</h3>
+          <ul>
+            <li>220/45 degC, K = 0.52, 0.5mm retraction at 30mm/s, 10% gyroid infill, 50mm/s speed at 1k acceleration, 50% fan</li>
+            <li>A little bit of stringing but generally a good looking print.  Not very flexible but probably expected given the walls, infill and material. Settings obtained!</li>
+          </ul>
+          <div class="test-photos">
+            <img src="img/7-40_1.jpg" alt="7-40_1">
+            <img src="img/7-40_2.jpg" alt="7-40_2">
+            <img src="img/7-40_3.jpg" alt="7-40_3">
+            <img src="img/7-40_4.jpg" alt="7-40_4">
+            <img src="img/7-40_5.jpg" alt="7-40_5">
+            <img src="img/7-40_6.jpg" alt="7-40_6">
+            <img src="img/7-40_7.jpg" alt="7-40_7">
+            <img src="img/7-40_8.jpg" alt="7-40_8">
+          </div>
         </div>
         <button class="accordion">Title</button>
         <div class="panel">
