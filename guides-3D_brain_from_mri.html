@@ -1,0 +1,28 @@
+---
+layout: default
+title: Guides 3D Brain from MRI
+---
+      
+<!-- page content -->
+<div class="page-content">
+  <h1>How to 3D print your brain from an MRI scan</h1>
+  <p>A quick google brings up quite a few different ways of doing this, but I tried the two most popular ones I could find, both of which seemed to work well, each with their own
+    advantages and disadvantages</p>
+
+  <h2>Freesurfer</h2>
+  <p>Freesurfer is an open source software suite for processing and analysing human brain MRI images.  Being open source it is the solution I want to work the most, and actually is the solution 
+    that I think is the best as the entire processing stage is automated.  However for me, the detailed MRI scans had some defects which freesurfer couldn't resolve properly, and the lower 
+    resolution scans produced (as expected) a lower resolution 3D image.  If you're looking to do this I would try freesurfer first.</p>
+  <p>Firstly read the following paragraph in its entirety, then do the same for <a class="inline-link" href="https://www.youtube.com/watch?v=b8GYitFu2OY&t=26s">this youtube video</a>, 
+    and come back here again to check which steps need adjusting or for troubleshooting.  Use the instructions <a class="inline-link" href="https://surfer.nmr.mgh.harvard.edu/fswiki/VM_67_win">here</a>  
+    to install the ubuntu virtualbox on windows with freesurfer already installed.  Alternatively there are some other youtube videos with people using freesurfer directly on Mac or Linux.  
+    If you have an AMD CPU (like me) you might need <a class="inline-link" href="https://ourcodeworld.com/articles/read/1282/how-to-solve-oracle-vm-virtualbox-error-with-amd-processors-amd-v-is-disabled-in-the-bios-or-by-the-host-os-verr-svm-disabled">this fix</a> 
+    for the vitual machine to run.  Lots of freesurfer and virtualbox questions and answers can be found <a class="inline-link" href="https://www.mail-archive.com/freesurfer@nmr.mgh.harvard.edu/">here</a>, 
+    and if you get an error about write access, you might need to use the command 'sudo chmod -R 777 /usr/local/freeserfer/7.1.0-1/subjects'.  Freesurfer requires perserverence, but everyhting is automated.</p>
+
+  <h3>3D Slicer</h3>
+  <p>You can use the segment editor tool in 3D slicer, another free piece of software to extract the brain tissue from your MRI scan.
+    I followed <a class="inline-link" href="https://www.youtube.com/watch?v=Uht6Fwtr9hE">this youtube video</a>, substituting the 'colour' for brain tissue when they pick bone.
+    You will have to play around with the tolerance values to fully extract the brain, the after lots of manual editing with the scissor and erase tools to clean up the 3D image.
+    This process requires quite a bit of manual work, but will deal with any poor quality MRI scans and gives you lots of control over the final result.</p>
+</div>

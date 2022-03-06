@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <title>Guides Marlin</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header class="header">
+        <div class="site-brand">
+          <a href="index.html"><img src="images/common/wigglememore3d_logo.png" alt="Logo"></a>
+          <h1>wigglememore3d</h1>
+        </div>
+        <!-- nav bar -->
+        <!-- nav bar -->
+<nav role="navigation">
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbutton">VzBot
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="vzbot-journey.html">Journey</a>
+            <a href="vzbot-test_prints.html">Test Prints</a>
+            <a href="vzbot-mods.html">Mods</a>
+            <a href="vzbot-klipper.html">Klipper</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbutton">Ender 5
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="ender_5-journey.html">Journey</a>
+            <a href="ender_5-test_prints.html">Test Prints</a>
+            <a href="ender_5-mods.html">Mods</a>
+            <a href="ender_5-marlin.html">Marlin</a>
+          </div>
+      </div>
+      <a href="my_prints.html">My Prints</a>
+      <div class="dropdown">
+        <button class="dropbutton">Guides
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="guides-wires_and_connectors.html">Wires and Connectors</a>
+          <a href="guides-3D_brain_from_mri.html">Brain from MRI</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbutton">Non 3D Printing
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="non_3d_printing-openfoam">OpenFOAM</a>
+            <a href="non_3d_printing-github">Github Pages and Jekyll</a>
+          </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav> 
+      </header>
+
+      <!-- page content -->
+      <link href="css/guides-marlin-styles.css" type="text/css" rel="stylesheet">
+
+<!-- page content -->
+<div class="page-content">
+  <h1>Marlin Configuration Guide</h1>
+  <p>This will be specific to my configuration on my Ender 5 but should cover and explain all of the sections you will need to edit to configure Marlin for your printer.
+      Since I often need to update the firmware along with mods and changes, I have tried to split up the guide into sections which make it easier to follow.
+      If you find anything mising please get in contant and I will update the page with the information you need.</p>
+  
+  <button class="accordion">My Firmware Binaries</button>
+    <div class="panel">
+    <p>Just in case your setup happens to be the same (or at least significantly similar) to mine you should be able to download and flash the relevant firmware
+      binary directly to your mainboard.</p>
+    <h3>Change notes</h3>
+    <ul>
+      <li>v3.1 - working release</li>
+      <ul>
+        <li>fixed the origin location by using endstop max and changing the home direction for x and y, the origin is now in the front left</li>
+        <li>fixed bltouch x and y offsets to account for the new origin</li>
+        <li>increased max angle that z-axis auto align can account for up to 10%</li>
+        <li>removed stepper locations for z-axis auto align (clearly something was wrong) but defined the stepper layout</li>
+        <li>increased probing speed</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v3.0 - almost working release</li>
+      <ul>
+        <li>triple z leadscrew with true auto bed levelling</li>
+        <li>defined stepper leadscrew locations for better levelling - clearly there is something wrong because it massively overcompensates</li>
+        <li>reduced stepper current for all motion system motors to 650 from 800</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v2.0 - working release</li>
+      <ul>
+        <li>downloaded new bugfix branch 18/05/21</li>
+        <li>Marlin 2.0.8 yasssssssssss</li>
+        <li>recreation of v1.2 but with the new version of Marlin</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.2 - working release</li>
+      <ul>
+        <li>added z-offset wizard</li>
+        <li>added babystepping for z-offset</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.1 - working release</li>
+      <ul>
+        <li>everything works, default z-offset is 0 so this needs to be configured manually each time the eeprom is reset</li>
+        <li>bltouch offsets - marlin firmware has the front left as the origin; since mine is the back right, the offsets are +ve instead of -ve</li>
+        <li>reduce controller fan time after steppers have stopped to 10s (from 60s)</li>
+        <li>added 100ms of fan kickstart time at 100% for the 'main fan', aka the part-cooling fan that is fan0</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.1_test - test only</li>
+      <ul>
+        <li>changed bltouch offsets to positive (even though they should be negative but who knows, maybe it will work)</li>
+        <li>set FAN1 to be the hotend fan that should come on when temp above 40 degC - success!</li>
+        <li>set FAN2 to be the mainboard fan that should come on when the steppers are used, and go off after 60 seconds of no steppers - this will be used in a future mod to cool the electronics enclosure</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.0 - non-working</li>
+      <ul>
+        <li>added bltouch settings with (hopefully (ha, as if) correct) x and y offsets</li>
+        <li>bltouch using the z-min endstop pin, not the separate bltouch pin</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v0.5 - working release</li>
+      <ul>
+        <li>this is the working version before adding the bltouch, so if you want to go back to the purely mechanical z endstop use this binary</li>
+        <li>has the correct hotend pid settings for the stock creality hotend</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v0.4 - test only</li>
+      <ul>
+        <li>downloaded new bugfix branch 26/04/21</li>
+        <li>configured for Bigtreetech GTR</li>
+        <li>correct x, y, z and e-steps for the creality stock motors, extruder and upgraded 8mm OD, 2mm lead, 2mm pitch leadscrew</li>
+      </ul>
+    </ul>
+    <h3>Downloads</h3>
+    <p><a href="v3-1.bin" download="firmware.bin">v3.1</a> - Downlaod this if you have a stock Creality Ender 5 (with 2-start leadscrew) plus a BL-touch, triple z-axis and a Bigtreetech GTR</p>
+    <p><a href="v2-0.bin" download="firmware.bin">v2.0</a> - Downlaod this if you have a stock Creality Ender 5 (with 2-start leadscrew) plus a BL-touch and a Bigtreetech GTR</p>
+    <p><a href="v0-5.bin" download="firmware.bin">v0.5</a> - Download this if you have a stock Creality Ender 5 (with 2-start leadscrew) and a Bigtreetech GTR</p>
+    <p><a href="2_calibrated_z_and_e.bin" download="firmware.bin">v0.stock.2</a> - Download this is you have a stock Creality Ender 5 with the 4.2.7 mainboard and a 2-start leadscrew - calibrated z-1600 and e-steps</p>
+    <p><a href="1_default.bin" download="firmware.bin">v0.stock.1</a> - Download this is you have a stock Creality Ender 5 with the 4.2.7 mainboard - all default</p>
+  </div>
+  <button class="accordion">Setting up Visual Studio Code</button>
+  <div class="panel">
+    <h3>Download VSCode</h3>
+    <p>content</p>
+    <h3>Install relevant extensions</h3>
+    <p>content</p>
+  </div>
+  <button class="accordion">Downloading Marling</button>
+  <div class="panel">
+    <h3>The Bugfix branch</h3>
+    <p>content</p>
+  </div>
+  <button class="accordion">Stock Ender 5 Marlin 2.0.x</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+  <button class="accordion">title</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+  <button class="accordion">title</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
+
+
+      <!-- footer -->
+      <!-- footer -->
+<footer class="footer">
+    <p>&copy; Copyright 2021</p>
+  </footer> 
+
+    </div>
+  </body>
+</html>

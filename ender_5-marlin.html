@@ -1,0 +1,134 @@
+---
+layout: default
+title: Ender 5 Marlin
+---
+<link href="css/guides-marlin-styles.css" type="text/css" rel="stylesheet">
+
+<!-- page content -->
+<div class="page-content">
+  <h1>Marlin Configuration Guide</h1>
+  <p>This will be specific to my configuration on my Ender 5 but should cover and explain all of the sections you will need to edit to configure Marlin for your printer.
+      Since I often need to update the firmware along with mods and changes, I have tried to split up the guide into sections which make it easier to follow.
+      If you find anything mising please get in contant and I will update the page with the information you need.</p>
+  
+  <button class="accordion">My Firmware Binaries</button>
+    <div class="panel">
+    <p>I'm not going to post any firmware binaries because I am largely against installing random files which you don't know exactly what they do (although on a 3D printer mainboard
+      the worst you're going to do is brick a bunch of of electronics, but I highgly recommend downloading the Marlin firmware and configuring you own custom version of Marlin.
+      These are the iterations I went through to go with all the different mods I did to the printer and Marlin features I wanted to enable.</p>
+    <h3>Change notes</h3>
+    <ul>
+      <li>v3.1 - working release</li>
+      <ul>
+        <li>fixed the origin location by using endstop max and changing the home direction for x and y, the origin is now in the front left</li>
+        <li>fixed bltouch x and y offsets to account for the new origin</li>
+        <li>increased max angle that z-axis auto align can account for up to 10%</li>
+        <li>removed stepper locations for z-axis auto align (clearly something was wrong) but defined the stepper layout</li>
+        <li>increased probing speed</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v3.0 - almost working release</li>
+      <ul>
+        <li>triple z leadscrew with true auto bed levelling</li>
+        <li>defined stepper leadscrew locations for better levelling - clearly there is something wrong because it massively overcompensates</li>
+        <li>reduced stepper current for all motion system motors to 650 from 800</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v2.0 - working release</li>
+      <ul>
+        <li>downloaded new bugfix branch 18/05/21</li>
+        <li>Marlin 2.0.8 yasssssssssss</li>
+        <li>recreation of v1.2 but with the new version of Marlin</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.2 - working release</li>
+      <ul>
+        <li>added z-offset wizard</li>
+        <li>added babystepping for z-offset</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.1 - working release</li>
+      <ul>
+        <li>everything works, default z-offset is 0 so this needs to be configured manually each time the eeprom is reset</li>
+        <li>bltouch offsets - marlin firmware has the front left as the origin; since mine is the back right, the offsets are +ve instead of -ve</li>
+        <li>reduce controller fan time after steppers have stopped to 10s (from 60s)</li>
+        <li>added 100ms of fan kickstart time at 100% for the 'main fan', aka the part-cooling fan that is fan0</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.1_test - test only</li>
+      <ul>
+        <li>changed bltouch offsets to positive (even though they should be negative but who knows, maybe it will work)</li>
+        <li>set FAN1 to be the hotend fan that should come on when temp above 40 degC - success!</li>
+        <li>set FAN2 to be the mainboard fan that should come on when the steppers are used, and go off after 60 seconds of no steppers - this will be used in a future mod to cool the electronics enclosure</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v1.0 - non-working</li>
+      <ul>
+        <li>added bltouch settings with (hopefully (ha, as if) correct) x and y offsets</li>
+        <li>bltouch using the z-min endstop pin, not the separate bltouch pin</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v0.5 - working release</li>
+      <ul>
+        <li>this is the working version before adding the bltouch, so if you want to go back to the purely mechanical z endstop use this binary</li>
+        <li>has the correct hotend pid settings for the stock creality hotend</li>
+      </ul>
+    </ul>
+    <ul>
+      <li>v0.4 - test only</li>
+      <ul>
+        <li>downloaded new bugfix branch 26/04/21</li>
+        <li>configured for Bigtreetech GTR</li>
+        <li>correct x, y, z and e-steps for the creality stock motors, extruder and upgraded 8mm OD, 2mm lead, 2mm pitch leadscrew</li>
+      </ul>
+    </ul>
+  </div>
+  <button class="accordion">Setting up Visual Studio Code</button>
+  <div class="panel">
+    <h3>Download VSCode</h3>
+    <p>content</p>
+    <h3>Install relevant extensions</h3>
+    <p>content</p>
+  </div>
+  <button class="accordion">Downloading Marling</button>
+  <div class="panel">
+    <h3>The Bugfix branch</h3>
+    <p>content</p>
+  </div>
+  <button class="accordion">Stock Ender 5 Marlin 2.0.x</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+  <button class="accordion">title</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+  <button class="accordion">title</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>

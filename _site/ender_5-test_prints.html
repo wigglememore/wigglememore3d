@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <title>Ender 5 Test Print Tracking</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header class="header">
+        <div class="site-brand">
+          <a href="index.html"><img src="images/common/wigglememore3d_logo.png" alt="Logo"></a>
+          <h1>wigglememore3d</h1>
+        </div>
+        <!-- nav bar -->
+        <!-- nav bar -->
+<nav role="navigation">
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbutton">VzBot
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="vzbot-journey.html">Journey</a>
+            <a href="vzbot-test_prints.html">Test Prints</a>
+            <a href="vzbot-mods.html">Mods</a>
+            <a href="vzbot-klipper.html">Klipper</a>
+          </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbutton">Ender 5
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="ender_5-journey.html">Journey</a>
+            <a href="ender_5-test_prints.html">Test Prints</a>
+            <a href="ender_5-mods.html">Mods</a>
+            <a href="ender_5-marlin.html">Marlin</a>
+          </div>
+      </div>
+      <a href="my_prints.html">My Prints</a>
+      <div class="dropdown">
+        <button class="dropbutton">Guides
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="guides-wires_and_connectors.html">Wires and Connectors</a>
+          <a href="guides-3D_brain_from_mri.html">Brain from MRI</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbutton">Non 3D Printing
+          <i class="fa fa-caret-down"></i>
+        </button>
+          <div class="dropdown-content">
+            <a href="non_3d_printing-openfoam">OpenFOAM</a>
+            <a href="non_3d_printing-github">Github Pages and Jekyll</a>
+          </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav> 
+      </header>
+
+      <!-- page content -->
+      <link href="css/ender_5-test_prints-styles.css" type="text/css" rel="stylesheet">
+
+<!-- page content -->
+<div class="page-content">
+  <h1>Test Print Tracking</h1>
+  <h2>Naming convention</h2>
+  <p>Whole number - printer mod or change</p>
+  <p>Tenths - test type change, e.g. moving from testing retraction settings to overall test prints</p>
+  <p>Hundrenths - change within test, e.g. changing retraction settings during stringing testing</p>
+  
+  <button class="accordion">Stock printer - overall test prints - 1.0x</button>
+  <div class="panel">
+    <p>Stock Cura PLA profile with 205/55 degC, 20mm/s, 20% infill and a skirt for bed adhesion.</p>
+    <p>These three prints were made immediately after building and levelling the bed; no calibration steps were completed apart from bed levelling.
+      They're obviously not perfect, and there are obviously lots of improvements to be made, but for £250 this is incredible!</p>
+    <h3>1.00 - Calibration Cube</h3>
+    <ul>
+      <li>Good bed adhesion</item>
+      <li>Top and bottom layers are smooth with no visible imperfections</li>
+      <li>x, y and z letters are clear with sharp line, although the gloss white makes things hard to see</li>
+      <li>Sides look reasonably smooth, possible banding every 2.5cm</li>
+      <li>Vertical edges have slight buldging</li>
+      <li>Small gaps on top and bottom of square feature, possibly due to poor wall thickness in the model, or poor overhangs/bridging</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-00_1.jpg" alt="1.00_1">
+      <img src="images/ender_5-test_prints/1-00_2.jpg" alt="1.00_2">
+      <img src="images/ender_5-test_prints/1-00_3.jpg" alt="1.00_3">
+      <img src="images/ender_5-test_prints/1-00_4.jpg" alt="1.00_4">
+      <img src="images/ender_5-test_prints/1-00_5.jpg" alt="1.00_5">
+      <img src="images/ender_5-test_prints/1-00_6.jpg" alt="1.00_6">
+    </div>
+    <h3>1.01 - 3D Benchy</h3>
+    <ul>
+      <li>Writing not perfectly clear on the bottom layer</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-01_1.jpg" alt="1.01_1">
+      <img src="images/ender_5-test_prints/1-01_2.jpg" alt="1.01_2">
+      <img src="images/ender_5-test_prints/1-01_3.jpg" alt="1.01_3">
+      <img src="images/ender_5-test_prints/1-01_4.jpg" alt="1.01_4">
+      <img src="images/ender_5-test_prints/1-01_5.jpg" alt="1.01_5">
+      <img src="images/ender_5-test_prints/1-01_6.jpg" alt="1.01_6">
+      <img src="images/ender_5-test_prints/1-01_7.jpg" alt="1.01_7">
+      <img src="images/ender_5-test_prints/1-01_8.jpg" alt="1.01_8">
+    </div>
+    <h3>1.02 - Mirco all-in-one</h3>
+    <ul>
+      <li>2hrs 20mins</li>
+      <li>Good bed adhesion</li>
+      <li>Significant stringing hroughout</li>
+      <li>Small layer shift approximately 1cm up</li>
+      <li>Overhangs are generally okay</li>
+      <li>Should have printed with higher infill, at least 30%</li>
+      <li>Calibrate retraction settings</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-02_1.jpg" alt="1.02_1">
+      <img src="images/ender_5-test_prints/1-02_2.jpg" alt="1.02_2">
+      <img src="images/ender_5-test_prints/1-02_3.jpg" alt="1.02_3">
+      <img src="images/ender_5-test_prints/1-02_4.jpg" alt="1.02_4">
+    </div>
+  </div>
+  <button class="accordion">Stock printer - stringing tests - 1.1x</button>
+  <div class="panel">
+    <p>Clearly these are not good.  Even the prints without much strining, a closer look reveals that there is severe (what looks like) underextrusion, 
+      and even failures where it stops extruding all together towards the tips.  My first and the obvious conclusion was that the repeated & close extrusions are
+      pulling melted plastic back up the bowden tube, and it is eventually blocking the nozzle; this was confirmed (or so I though) when I took apart the hotend,
+      cleaned it out and replaced the nozzle, and the clog was fixed.  This problem meant I avoided having multiple parts on the bed in one print unless I cloud
+      use Cura's print-one-at-a-time-setting, which limits productivity.</p>
+    <p>The above conclusion was incorrect.  The actual cause was that the tension spring on the extruder was too tight, and was crushing the filament.  For continuous
+      extrusion this was not causing any issues, however with the repeated & close extractions the filament crushing was becoming significant enough that it got stuck
+      in the bowden tube, causing the underextrusion and eventually print failures that I saw.  Checkout the <a href="ender_5-journey.html">Journey</a> page to see 
+      how I fixed this, and the next test-print section to see the results.
+    </p>
+    <h3>1.10 - Stringing</h3>
+    <ul>
+      <li>205/60 degC, retraction 5mm at 40mm/s</li>
+      <li>Significant stringing</li>
+      <li>Bobbling on the strings close to the parts</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-10_1.jpg" alt="1.10_1">
+      <img src="images/ender_5-test_prints/1-10_2.jpg" alt="1.10_2">
+    </div>
+    <h3>1.11 - Stringing</h3>
+    <ul>
+      <li>205/60 degC, retraction 8mm at 40mm/s</li>
+      <li>Significant improvement on stringing</li>
+      <li>Surfaces are less smooth, especially at the top</li>
+    </ul>
+      <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-11_1.jpg" alt="1.11_1">
+      <img src="images/ender_5-test_prints/1-11_2.jpg" alt="1.11_2">
+    </div>
+    <h3>1.13 - Stringing</h3>
+    <ul>
+      <li>200/60 degC, retraction 8mm at 40mm/s</li>
+      <li>No significant change</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-13_1.jpg" alt="1.13_1">
+      <img src="images/ender_5-test_prints/1-13_2.jpg" alt="1.13_2">
+    </div>
+    <h3>1.14 - Stringing</h3>
+    No amount of bed levelleing could get this to stick
+    <h3>1.15 - Stringing</h3>
+    <ul>
+      <li>205/60 degC, retraction 10mm at 40mm/s</li>
+      <li>Print is bad from half way up, with significant underextrusion and inconsistent surface</li>
+      <li>Jam for the last ten layers</li>
+      <ul>
+        <li>Could be the repeated short extrusions pulling lots of melted filament through the heat break and into the bowden tube, 
+            with not enough long periods of extrusion to clear it.  Upon disassembly to clear the clog, there is lots of hardened filament in the bowden tube.</li>
+        <li>I think the more likely scenario is that the extruder spring is too tight, so the repreated short and close retractions are crushing the filament, 
+            distorting it enough that it gets stuck in the small tolerances of the bowden tube, causing the appearance of a clog.</li>
+        <li>Will repeat a few more tests with a better filament before making any changes.</li>
+      </ul>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-15_1.jpg" alt="1.15_1">
+      <img src="images/ender_5-test_prints/1-15_2.jpg" alt="1.15_2">
+    </div>
+    <h3>1.16 - Stringing</h3>
+    <ul>
+      <li>eSun PLA+ Orange</li>
+      <li>215/60 degC, retracton 10mm at 60mm/s</li>
+      <li>Pretty first half, with smooth walls and no stringing</li>
+      <li>Top half of the print leaves a lot to be desired</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-16_1.jpg" alt="1.16_1">
+      <img src="images/ender_5-test_prints/1-16_2.jpg" alt="1.16_2">
+    </div>
+    <h3>1.17 - Stringing</h3>
+    <ul>
+      <li>eSun PLA+ Orange</li>
+      <li>205/60 degC, retraction 9mm at 30mm/s (this was not a great change, retraction speed should generally go up with retraction distance)</li>
+      <li>Similar jam to 1.15 for the top of the print</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/1-17_1.jpg" alt="1.17_1">
+      <img src="images/ender_5-test_prints/1-17_2.jpg" alt="1.17_2">
+    </div>
+  </div>
+  <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - stringing tests - 2.0x</button>
+  <div class="panel">
+    <p>Lots of changes here, all at the same time (definitely not the correct way to mod your printer) however they mainly have to impacts: the bed supports and
+    corner braces increase rigidity, reducing banding or layer inconsistencies and the top mounted extruder and extruder spring mod should fix the retraction/clogging issue seen in the 1.1x prints.</p>
+    <h3>2.00 - Stringing</h3>
+    <ul>
+      <li>208/65 degC - retraction 2mm at 45mm/s</li>
+      <li>Lots of stringing as expected with such low retraction but I wanted to see where the limit was, and how quickly the quality reduces</li>
+      <li>Interestingly all of the blobs on the strings occur where the nozzle comes onto the parts, not off of it.  I think this is something which linear advance will fix.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/2-00_1.jpg" alt="2.00_1">
+      <img src="images/ender_5-test_prints/2-00_2.jpg" alt="2.00_2">
+    </div>
+    <h3>2.01 - Stringing</h3>
+    <ul>
+      <li>208/65 degC - retraction 3mm at 45mm/s</li>
+      <li>Going in the right direction, but retraction needs to be increased more</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/2-01_1.jpg" alt="2.01_1">
+      <img src="images/ender_5-test_prints/2-01_2.jpg" alt="2.01_2">
+    </div>
+    <h3>2.02 - Stringing</h3>
+    <ul>
+      <li>208/65 degC - retraction 6mm at 45mm/s</li>
+      <li>Looking much better over the majority of the print</li>
+      <li>This test has such tiny print areas at the top of the cones that I'm ignoring the stringing/blobbing on those sections and settling on 6mm retraction</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/2-02_1.jpg" alt="2.02_1">
+      <img src="images/ender_5-test_prints/2-02_2.jpg" alt="2.02_2">
+    </div>
+  </div>
+  <button class="accordion">Bed supports, corner braces, top mounted extruder, extruder spring mod - overall tests - 2.1x</button>
+  <div class="panel">
+    <p>Explanation</p>
+    <h3>2.10 - Micro all-in-one</h3>
+    <ul>
+      <li>Stock PLA profile, 0.2mm layer height, 0.4mm width with 0.4mm nozzle</li>
+      <li>2 wall, 4 top and bottom layers wtih 20% infill</li>
+      <li>208/65 degC and 6mm/45mm/s retraction as before, with 60mm/s print, 25mm/s walls and 18mm/s initial layer</li>
+      <li>This print looks great!  All the writing is readable, small features are clean and well defined, overhangs are almost perfect all the way to 80 degrees, bridges have very little sag and there is no stringing.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/2-10_1.jpg" alt="2.10_1">
+      <img src="images/ender_5-test_prints/2-10_2.jpg" alt="2.10_2">
+      <img src="images/ender_5-test_prints/2-10_3.jpg" alt="2.10_3">
+      <img src="images/ender_5-test_prints/2-10_4.jpg" alt="2.10_4">
+    </div>
+    <h3>2.11 - 3D Benchy</h3>
+    <ul>
+      <li>Same print settings as the previous print and the quality is similarly great</li>
+      <li>The writing on the back is not particularly clear and there are some horizomtal lines on the hull, but the overhangs look great and there is no stringing</li>
+      <li>Definitely my best benchy to date</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/2-11_1.jpg" alt="2.11_1">
+      <img src="images/ender_5-test_prints/2-11_2.jpg" alt="2.11_2">
+      <img src="images/ender_5-test_prints/2-11_3.jpg" alt="2.11_3">
+      <img src="iimages/ender_5-test_printsmg/2-11_4.jpg" alt="2.11_4">
+      <img src="images/ender_5-test_prints/2-11_5.jpg" alt="2.11_5">
+      <img src="images/ender_5-test_prints/2-11_6.jpg" alt="2.11_6">
+      <img src="images/ender_5-test_prints/2-11_7.jpg" alt="2.11_7">
+      <img src="images/ender_5-test_prints/2-11_8.jpg" alt="2.11_8">
+    </div>
+  </div>
+  <button class="accordion">Triple z-axis mod - z-perpendicularity(?) and consistency tests - 3.0x</button>
+  <div class="panel">
+    <p>These prints are to test the triple z-axis mod I have designed, printed and installed on my Ender 5.  If things are not perfectly vertical then I expect artifacts to be present in the z-direction.</p>
+    <h3>3.00 - Vase</h3>
+    <ul>
+      <li>eSun PLA+ Magenta at 80mm/s in vase mode</li>
+      <li>No artifacts present, and in fact the print is so clean that I can see what I believe to be the triangles from the discretisation of the model into an stl</li>
+      <li>Need to print something similar over the full z height after the mod (around 285mm) but promising results to far</li>
+      <li>Also my first vase mode print and I think it is great.  The print is super strong and doesn't have any seams, and is plenty sturdy with some water in.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-00_1.jpg" alt="3.00_1">
+      <img src="images/ender_5-test_prints/3-00_2.jpg" alt="3.00_2">
+      <img src="images/ender_5-test_prints/3-00_3.jpg" alt="3.00_3">
+    </div>
+    <h3>3.00 - 3D Benchy</h3>
+    <ul>
+      <li>Same print setting as the 2.11 benchy but at 80mm/s print, 40mm/s walls and 200mm/s travel</li>
+      <li>Slightly more stringing that at the lower speed, but generally still a very good print.  I think as print speed increases so should retraction speed to maintain quality.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-01_1.jpg" alt="3.01_1">
+      <img src="images/ender_5-test_prints/3-01_2.jpg" alt="3.01_2">
+      <img src="images/ender_5-test_prints/3-01_3.jpg" alt="3.01_3">
+      <img src="images/ender_5-test_prints/3-01_4.jpg" alt="3.01_4">
+      <img src="images/ender_5-test_prints/3-01_5.jpg" alt="3.01_5">
+      <img src="images/ender_5-test_prints/3-01_6.jpg" alt="3.01_6">
+      <img src="images/ender_5-test_prints/3-01_7.jpg" alt="3.01_7">
+      <img src="images/ender_5-test_prints/3-01_8.jpg" alt="3.01_8">
+    </div>
+  </div>
+  <button class="accordion">eSun Marble PLA filament - temperature and retraction tuning - 3.1x</button>
+  <div class="panel">
+    <p>My next big project was 3D printing my brain, a task for which I selected eSun eMarble PLA filament.  A material which has gorgeous marble like flecking and hides layer lines well.
+        Obviously I wasn't going to start a three day print without trusing my settings, so here goes the calibration.</p>
+    <h3>3.10 - xyz cube</h3>
+    <ul>
+      <li>First test was at 205/65 degC, 70mm/s with 4mm retraction, similar settings to how I print eSun PLA+</li>
+      <li>The xyz cube looks okay, some small bulging on the corners and slight drooping on the bridging, so I'll turn the temperature down for the next print</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-10_1.jpg" alt="3.10_1">
+      <img src="images/ender_5-test_prints/3-10_2.jpg" alt="3.10_2">
+      <img src="images/ender_5-test_prints/3-10_3.jpg" alt="3.10_3">
+      <img src="images/ender_5-test_prints/3-10_4.jpg" alt="3.10_4">
+      <img src="images/ender_5-test_prints/3-10_5.jpg" alt="3.10_5">
+    </div>
+    <h3>3.11 - Mirco all-in-one</h3>
+    <ul>
+      <li>Same settings as before but at 200 degC</li>
+      <li>What a hot mess this is, looks more like blob-city than a classic calibration test.  The temperature must still be way too hot.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-11_1.jpg" alt="3.11_1">
+      <img src="images/ender_5-test_prints/3-11_2.jpg" alt="3.11_2">
+    </div>
+    <h3>3.12 - 3D Benchy</h3>
+    <ul>
+      <li>Reduced the temp to 190 degC and kept the 6mm retraction</li>
+      <li>Vastly improved, but there is still some stringing which I would like to get rid of</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-12_1.jpg" alt="3.12_1">
+      <img src="images/ender_5-test_prints/3-12_2.jpg" alt="3.12_2">
+      <img src="images/ender_5-test_prints/3-12_3.jpg" alt="3.12_3">
+      <img src="images/ender_5-test_prints/3-12_4.jpg" alt="3.12_4">
+      <img src="images/ender_5-test_prints/3-12_5.jpg" alt="3.12_5">
+      <img src="images/ender_5-test_prints/3-12_6.jpg" alt="3.12_6">
+      <img src="images/ender_5-test_prints/3-12_7.jpg" alt="3.12_7">
+      <img src="images/ender_5-test_prints/3-12_8.jpg" alt="3.12_8">
+    </div>
+    <h3>3.13 - 3D Benchy</h3>
+    <ul>
+      <li>This is what happens when you forget you had vase mode on and try to print a benchy...</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-13_1.jpg" alt="3.13_1">
+      <img src="images/ender_5-test_prints/3-13_2.jpg" alt="3.13_2">
+    </div>
+    <h3>3.14 - 3D Benchy</h3>
+    <ul>
+      <li>190/65 degC, 7.5mm at 55mm/s retraction</li>
+      <li>This looks a lot better so I'll use these as the final settings for eMarble</li>
+      <li>Still slightly hesitant at the high retraction, configuring linear advance would probably help, but we'll see how it goes</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-14_1.jpg" alt="3.14_1">
+      <img src="images/ender_5-test_prints/3-14_2.jpg" alt="3.14_2">
+      <img src="images/ender_5-test_prints/3-14_3.jpg" alt="3.14_3">
+      <img src="images/ender_5-test_prints/3-14_4.jpg" alt="3.14_4">
+      <img src="images/ender_5-test_prints/3-14_5.jpg" alt="3.14_5">
+      <img src="images/ender_5-test_prints/3-14_6.jpg" alt="3.14_6">
+      <img src="images/ender_5-test_prints/3-14_7.jpg" alt="3.14_7">
+      <img src="images/ender_5-test_prints/3-14_8.jpg" alt="3.14_8">
+    </div>
+  </div>
+  <button class="accordion">Linear Advance k-factor tuning - 3.2x</button>
+  <div class="panel">
+    <p>Explanation</p>
+    <h3>3.20 - K-factor tuning print from Marlin documentation</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-20_1.jpg" alt="3.20_1">
+    </div>
+  </div>
+  <button class="accordion">Retraction tuning with linear advance - 3.3x</button>
+  <div class="panel">
+    <p>Explanation</p>
+    <h3>3.30 - Retraction tower from Teaching Tech calibration website</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-30_1.jpg" alt="3.30_1">
+    </div>
+    <h3>3.31 - 3D Benchy</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-31_1.jpg" alt="3.31_1">
+      <img src="images/ender_5-test_prints/3-31_2.jpg" alt="3.31_2">
+      <img src="images/ender_5-test_prints/3-31_3.jpg" alt="3.31_3">
+    </div>
+    <h3>3.32 - 3D Benchy</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/3-32_1.jpg" alt="3.32_1">
+      <img src="images/ender_5-test_prints/3-32_2.jpg" alt="3.32_2">
+      <img src="images/ender_5-test_prints/3-32_3.jpg" alt="3.32_3">
+    </div>
+  </div>
+  <button class="accordion">Linear Advance k-factor tuning - 4.0x</button>
+  <div class="panel">
+    <p>Explanation</p>
+  </div>
+  <button class="accordion">Retraction tuning with linear advance - 4.1x</button>
+  <div class="panel">
+    <p>Explanation</p>
+    <h3>4.1x (x = 0, 1, 2) - Retraction tower from Teaching Tech calibration website</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/4-10.jpg" alt="4.10">
+      <img src="images/ender_5-test_prints/4-11.jpg" alt="4.11">
+      <img src="images/ender_5-test_prints/4-12.jpg" alt="4.12">
+    </div>
+  </div>
+  <button class="accordion">Acceleration and Jerk tuning - 4.2x</button>
+  <div class="panel">
+    <p>Explanation</p>
+    <h3>4.2x (x = 0, 1, 2, 3) - Ringing test from Teaching Tech calibration website</h3>
+    <div class="test-photos">
+      <table>
+        <tr>
+          <td><img src="images/ender_5-test_prints/4-20_1.jpg" alt="4.20_1"></td>
+          <td><img src="images/ender_5-test_prints/4-21_1.jpg" alt="4.21_1"></td>
+          <td><img src="images/ender_5-test_prints/4-22_1.jpg" alt="4.22_1"></td>
+          <td><img src="images/ender_5-test_prints/4-23_1.jpg" alt="4.23_1"></td>
+        </tr>
+        <tr>
+          <td><img src="images/ender_5-test_prints/4-20_2.jpg" alt="4.20_2"></td>
+          <td><img src="images/ender_5-test_prints/4-21_2.jpg" alt="4.21_2"></td>
+          <td><img src="images/ender_5-test_prints/4-22_2.jpg" alt="4.22_2"></td>
+          <td><img src="images/ender_5-test_prints/4-23_2.jpg" alt="4.23_2"></td>
+        </tr>
+        <tr>
+          <td><img src="images/ender_5-test_prints/4-20_3.jpg" alt="4.20_3"></td>
+          <td><img src="images/ender_5-test_prints/4-21_3.jpg" alt="4.21_3"></td>
+          <td><img src="images/ender_5-test_prints/4-22_3.jpg" alt="4.22_3"></td>
+          <td><img src="images/ender_5-test_prints/4-23_3.jpg" alt="4.23_3"></td>
+        </tr>
+      </table>
+    </div>
+    <h3>4.2x (x = 4, 5) - 3D Benchy</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/4-24.jpg" alt="4.24">
+      <img src="images/ender_5-test_prints/4-25.jpg" alt="4.25">
+    </div>
+  </div>
+  <button class="accordion">Acceleration and Jerk tuning with s-curve acceleration - 4.3x</button>
+  <div class="panel">
+    <p>Explanation</p>
+    <h3>4.30 - Ringing test from Teaching Tech calibration website</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/4-30_1.jpg" alt="4.30_1">
+      <img src="images/ender_5-test_prints/4-30_2.jpg" alt="4.30_2">
+      <img src="images/ender_5-test_prints/4-30_3.jpg" alt="4.30_3">
+    </div>
+    <h3>4.31 - 3D Benchy</h3>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/4-31.jpg" alt="4.31">
+    </div>
+  </div>
+  <button class="accordion">PETG Calibration - 5.xx</button>
+  <div class="panel">
+    <h3>5.01 - Bed adhesion test (wtih Magigoo)</h3>
+    <ul>
+      <li>230/70 - first layer 0.2mm - Perfect adhesion, no warping, print popped off once the print bed hit around 40 degC, glassy smooth base.  A perfect print.</li>
+      <li>I had planned 230/70 - first layer 0.24 - 230/80, 230/90, 235/80, 240/80 but I don't really need to anymore.  Temperatures might change with some temp towers and 
+          adhesion of the other tests but it looks good for now.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/5-01_1.jpg" alt="5.01_1">
+      <img src="images/ender_5-test_prints/5-01_2.jpg" alt="5.01_2">
+    </div>
+    <h3>5.02 - Temperature test (40% fan)</h3>
+    <ul>
+      <li>Testing temperature from 230 to 250 degC in 4 degC intervals</li>
+      <li>230 degC gives the print with the best bridging, the rest of the print looks equall across all temperatures</li>
+      <li>All of the strength test spikes bent instead of snapped, so 230 doesn't seem noticeably weaker than the higher temperatures</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/5-02_1.jpg" alt="5.02_1">
+    </div>
+    <h3>5.03 - Linear advance tuning</h3>
+    <ul>
+      <li>0.0 &#60; k &#60; 2.0 (0.2 interval)</li>
+      <li>0.0 &#60; k &#60; 0.4 (0.04 interval)</li>
+      <li>Settling on a k value of 0.1</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/5-03_1.jpg" alt="5.03_1">
+      <img src="images/ender_5-test_prints/5-03_2.jpg" alt="5.03_2">
+    </div>
+    <h3>5.04 - Retraction tuning</h3>
+    <ul>
+      <li>Poeple generally say that speed is more important than distance for PETG retraction</li>
+      <li>Retraction tower, 0.5mm to 3mm in 0.5mm intervals, all at 30mm/ and 230 degC - no stringing, but the exit/entry points to decrease in quality towards the lower retractions</li>
+      <li>Retraction tower, 2.5mm, varying speed from 20mm/s to 45mm/s in 5mm/s intervals</li>
+      <li>Same as before but at 240 degC</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/5-04_1.jpg" alt="5.04_1">
+      <img src="images/ender_5-test_prints/5-04_2.jpg" alt="5.04_2">
+      <img src="images/ender_5-test_prints/5-04_3.jpg" alt="5.04_3">
+    </div>
+    <h3>5.05 - Overall test print after tuning - 3D Benchy</h3>
+    <ul>
+      <li>240/70 degC</li>
+      <li>0.2mm layer height, 0.4mm layer width</li>
+      <li>3 walls, 3 top and bottom layers</li>
+      <li>10% gyroid infill</li>
+      <li>3mm retraction at 30mm/s</li>
+      <li>80mm/s print with 40mm/s walls, 200mm/s travel and 25mm/s initial layer</li>
+      <li>1000mm/s/s print acceleration and 2400mm/s/s travel</li>
+      <li>40% cooling from layer 4</li>
+    </ul>
+    <p>Some might say an almost flawless benchy.  Bridging in the roof is not the best but it is PETG with low fan so I'm okay with it.  Some also might say that I need to fix the image height...</p>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/5-05_1.jpg" alt="5.05_1">
+      <img src="images/ender_5-test_prints/5-05_2.jpg" alt="5.05_2">
+      <img src="images/ender_5-test_prints/5-05_3.jpg" alt="5.05_3">
+      <img src="images/ender_5-test_prints/5-05_4.jpg" alt="5.05_4">
+    </div>
+  </div>
+  <button class="accordion">eSun Silk PLA Calibration - 6.xx</button>
+  <div class="panel">
+    <h3>6.1x (x = 0,1,2,3) - Temperature tower</h3>
+    <ul>
+      <li>TeachingTech temperature test from 190 to 210 degC in 5 degC steps, 200 degC first layer and 65 degC bed temp, K = 0.07 and retraction = 1.0mm</li>
+      <li>6.10 failed (I think) due to a poor linear advance value because lots of material was being deposited near the start and end of extrusions with the print eventually being knocked over by the nozzle</li>
+      <li>6.11 was a repeat with me manually squashing the raised sections to stop the failure and 6.12 was with linear advance off, both failed in the same way</li>
+      <li>The last attempt before moving onto other settings was was to start at 180 degC instead of 190 but this changed nothing, clearly something else is wrong here</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/6-10.jpg" alt="6-10">
+      <img src="images/ender_5-test_prints/6-11.jpg" alt="6-11">
+      <img src="images/ender_5-test_prints/6-12.jpg" alt="6-12">
+      <img src="images/ender_5-test_prints/6-13.jpg" alt="6-13">
+    </div>
+    <h3>6.2x (x = 0,1) - Marlin Linear Advance</h3>
+    <ul>
+      <li>With my hypothesis from the temperature test already looking flakey I tried a linear advance test</li>
+      <li>6.20 was K = 0 to 2 in 0.2 steps and 6.21 was K = 0 to 0.4 in 0.02 steps</li>
+      <li>I still hate the Marlin LA test with all the lines but went with it and settled on a linear advance value of 0.07 (at 1500mm/s^2 and a jerk of (I think) 0.02)</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/6-20.jpg" alt="6-20">
+      <img src="images/ender_5-test_prints/6-21.jpg" alt="6-21">
+    </div>
+    <h3>6.30 - Retraction tower</h3>
+    <ul>
+      <li>TeachingTech retraction test from 0.4mm to 1.2mm in 0.2mm steps</li>
+      <li>Settled on a value of 1.0mm, seemed like a good compromise of printability and quality.</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/6-30.jpg" alt="6-30">
+    </div>
+    <h3>6.4x (x = 1,2) - 3D Benchy</h3>
+    <ul>
+      <li>A 3D Benchy to test out the settings I've chosen, getting kind of tense now as I need to print some parts for work in this filament and it still isn't working properly</li>
+      <li>Big nope, and another big nope</li>
+      <li>I started printing parts for work and it turns out that for this silk filament the retraction needs to be wayyyy lower, so we'll re-try some tests with this new knowledge</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/6-40.jpg" alt="6-40">
+      <img src="images/ender_5-test_prints/6-41.jpg" alt="6-41">
+    </div>
+    <h3>6.50 - Temperature Tower</h3>
+    <ul>
+      <li>TeachingTech temperature tower from 180 to 200 degC in 5 degC steps, 190 degC first layer and 65 degC bed temp; K = 0.07 and retraction = 0.4mm</li>
+      <li>The test completed which was the main goal, and I settled on a temperature of 190 degC as a good balance of quality and layer adhesion</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/6-50.jpg" alt="6-30">
+    </div>
+    <h3>6.6x (x = 1-8) - 3D Benchy</h3>
+    <ul>
+      <li>The Benchy is back with the same settings as test 6.50</li>
+      <li>Not the best Benchy I've ever printed, walls aren't super smooth and there were a few tiny tiny layer shifts but generally it looks pretty great, settings obtained!</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/6-60_1.jpg" alt="6-60_1">
+      <img src="images/ender_5-test_prints/6-60_2.jpg" alt="6-60_2">
+      <img src="images/ender_5-test_prints/6-60_3.jpg" alt="6-60_3">
+      <img src="images/ender_5-test_prints/6-60_4.jpg" alt="6-60_4">
+      <img src="images/ender_5-test_prints/6-60_5.jpg" alt="6-60_5">
+      <img src="images/ender_5-test_prints/6-60_6.jpg" alt="6-60_6">
+      <img src="images/ender_5-test_prints/6-60_7.jpg" alt="6-60_7">
+      <img src="images/ender_5-test_prints/6-60_8.jpg" alt="6-60_8">
+    </div>
+  </div>
+  <button class="accordion">Amazon Basics TPU Calibration - 7.xx</button>
+  <div class="panel">
+    <h3>7.10 - Temperature tower</h3>
+    <ul>
+      <li>TeachingTech temperature test from 210 to 230 in 5 degC steps</li>
+      <li>Linear advance off and 0.4mm retraction</li>
+      <li>30mm/s base feed rate, 18mm/s walls, 24mm/s infill, 50mm/s travel and 15mm/s first layer</li>
+      <li>First layer stuck really well, perhaps a little too well so will move the z-offset up a smidge and maybe re-apply the Magigoo</li>
+      <li>Temperature of 220 degC selected</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/7-10.jpg" alt="7-10">
+    </div>
+    <h3>7.20 - Retraction test</h3>
+    <ul>
+      <li>TeachingTech retraction test from 0mm to 0.8mm in 0.2mm steps with linear advance off</li>
+      <li>Retraction of 0.4mm selected, print was again extremely hard to get off the bed, maybe try reduing the bed temp from 60 degC (turns out this is way too hot for TPU)</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/7-20.jpg" alt="7-20">
+    </div>
+    <h3>7.3x (x = 1, 2, 3) - Linear advance test</h3>
+    <ul>
+      <li>Marlin linear advance test that I hate</li>
+      <li>7.30 I stopped printing after the first line because there probably isn't enough consistent extrusion for the flexible filament as the lines were too short</li>
+      <li>For 7.31 I increased the line length but the default z-motion in the test is too fast for my janky triple-z setup so the nozzle was at the wrong height due to leadscrew binding</li>
+      <li>Nozzle was a bit too close for 7.32 but something like K = 0.4 is suggested</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/7-31.jpg" alt="7-31">
+    </div>
+    <h3>7.33 - Linear advance test</h3>
+    <ul>
+      <li>I used the stl from the Klipper pressure advance test, sliced it with their settings then made a short python script to add in the changing linear advance value on layer change.  The script is below, you have to change the extension to .txt then back to .gcode after the operation.</li>
+      <li><div data-include="python_script_html_include.html"></div></li>
+      <li>This is 1000% better than the Marlin linear advance test and everyone should do it instead of using the awful line thing</li>
+      <li>K = 1.5.6mm high / 0.3mm per layer * 0.01 K change per layer = 0.52.  K selected!</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/7-33_1.jpg" alt="7.33_1">
+      <img src="images/ender_5-test_prints/7-33_2.jpg" alt="7.33_2">
+      <img src="images/ender_5-test_prints/7-33_3.jpg" alt="7.33_3">
+      <img src="images/ender_5-test_prints/7-33_4.jpg" alt="7.33_4">
+    </div>
+    <pre>
+      <code>
+        a_file = open("square_tower.txt", "r")
+        list_of_lines = a_file.readlines()
+        k = 0
+        for index, line in enumerate(list_of_lines):
+            if line == "M900 K\n":
+                k = round(k + 0.01, 2)
+                list_of_lines[index] = line.strip() + str(k) + "\n"
+
+        a_file = open("square_tower.txt", "w")
+        a_file.writelines(list_of_lines)
+        a_file.close()
+      </code>
+    </pre>
+    <h3>7.4x (x = 1-8) - 3D Benchy</h3>
+    <ul>
+      <li>220/45 degC, K = 0.52, 0.5mm retraction at 30mm/s, 10% gyroid infill, 50mm/s speed at 1k acceleration, 50% fan</li>
+      <li>A little bit of stringing but generally a good looking print.  Not very flexible but probably expected given the walls, infill and material. Settings obtained!</li>
+    </ul>
+    <div class="test-photos">
+      <img src="images/ender_5-test_prints/7-40_1.jpg" alt="7-40_1">
+      <img src="images/ender_5-test_prints/7-40_2.jpg" alt="7-40_2">
+      <img src="images/ender_5-test_prints/7-40_3.jpg" alt="7-40_3">
+      <img src="images/ender_5-test_prints/7-40_4.jpg" alt="7-40_4">
+      <img src="images/ender_5-test_prints/7-40_5.jpg" alt="7-40_5">
+      <img src="images/ender_5-test_prints/7-40_6.jpg" alt="7-40_6">
+      <img src="images/ender_5-test_prints/7-40_7.jpg" alt="7-40_7">
+      <img src="images/ender_5-test_prints/7-40_8.jpg" alt="7-40_8">
+    </div>
+  </div>
+  <button class="accordion">Title</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+  <button class="accordion">Title</button>
+  <div class="panel">
+    <p>content</p>
+  </div>
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+</script>
+
+
+      <!-- footer -->
+      <!-- footer -->
+<footer class="footer">
+    <p>&copy; Copyright 2021</p>
+  </footer> 
+
+    </div>
+  </body>
+</html>
