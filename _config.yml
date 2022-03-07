@@ -1,5 +1,6 @@
 # setup
 url: "https://wigglememore3d.com"
+permalink: pretty
 
 #because of github
 exclude: ['README.md']
