@@ -1,0 +1,5 @@
+# setup
+url: "https://wigglememore3d.com"
+
+#because of github
+exclude: ['README.md']
